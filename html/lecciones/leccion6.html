@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="/images/logo proyecto.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css" href = "/css/inicio.css"/>
+        <script src="/js/home.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <title>sepa la bola</title>
+    </head>
+    <body>
+        <div class="layout">
+            <div id="left-nav">
+                <h4 style="text-align:center; border-bottom: 1px solid black;"><strong>Manual de Programación CB28</strong></h4>
+                <ul>
+                    <div class="subnav">
+                        <a href="/index.html">
+                            <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>inicio</strong> <i class="fa fa-caret-down"></i></button>
+                        </a>
+                    </div>
+                    <div class="subnav">
+                        <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>recursos</strong><i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/html/recursos/aprender-logica.html">aprender lógica</a>
+                            <a href="/html/recursos/editores-de-codigo.html">editores de código</a>
+                            <a href="/html/recursos/paginas-programacion.html">páginas de programación</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>contenido</strong><i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/html/lecciones/leccion0.html">lección 0. logica de la programación</a>
+                            <a href="/html/lecciones/leccion1.html">lección 1. representación de algoritmos</a>
+                            <a href="/html/lecciones/leccion2.html">lección 2. variables y constantes</a>
+                            <a href="/html/lecciones/leccion3.html">lección 3. estructura del código en c++</a>
+                            <a href="/html/lecciones/leccion4.html">lección 4. entrada y salida</a>
+                            <a href="/html/lecciones/leccion5.html">lección 5. operaciones aritméticas</a>
+                            <a href="/html/lecciones/leccion6.html">lección 6. condicionales</a>
+                            <a href="/html/lecciones/leccion7.html">lección 7. bucles</a>
+                            <a href="/html/lecciones/leccion8.html">lección 8. bucles anidados</a>
+                            <a href="/html/lecciones/leccion9.html">lección 9. arreglos</a>
+                            <a href="/html/lecciones/leccion10.html">lección 10.arreglos dinámicos</a>
+                            <a href="/html/lecciones/leccion11.html">lección 11.punteros</a>
+                            <a href="/html/lecciones/leccion12.html">lección 12.funciones</a>
+                       </div>
+                    </div>
+                    
+                    <div class="subnav">
+                        <a href="/html/acercade.html">
+                            <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>acerca de</strong> <i class="fa fa-caret-down"></i></button>
+                        </a>
+                    </div>
+                    
+                </ul>
+
+                <h4 style="margin-top: auto; margin-bottom: 10px; text-align: center; font-size: 10px; color: black;">
+                    <strong>Cobach28 Panteras. 2026</strong>
+                </h4>        
+            </div> 
+            <main>
+                <h1><strong>lección 6</strong></h1>
+                <h2><strong>condicionales</strong></h2>
+                <p>
+                    Imagina que te encuentras programando un sistema que ordene a individuos por su grupo
+                    de edad ¿Cómo lo harías?
+                </p>
+                <p>
+                    Hasta ahora has aprendido a declarar variables y constantes, manejar entrada y salida.
+                    Pero para que el código pueda tomar decisiones en base a estos, necesitas conocer los
+                    condicionales.
+                </p>
+                <h3><strong>condicional if</strong></h3>
+                <p>
+                    Los condicionales if son estructuras que realizan una acción sólo si una condición es
+                    verdadera.
+                </p>
+                <p>
+                    Su estructura es la siguiente:
+                </p>
+                <pre style="font-size: 20px;"><code>
+if(condición){
+    acción1(); // considera acción como la instrucción que quieres que se cumpla
+}
+                </code></pre>
+                <p>
+                    Dentro de los paréntesis se evalúa un valor o una condición, las cuales pueden ser de diferentes tipos:
+                </p>
+                <ul>
+                    <li><strong>Booleano</strong>
+                        <p>
+                            Declara una variable bool y el condicional cumplirá una instrucción si
+                            esta es true;
+                        </p>
+                    </li>
+                    <li><strong>Igualdades</strong>
+                        <p>
+                            Para ver si una variable tiene un valor específico escribe dentro de los
+                            paréntesis (variable == #), siendo # un valor; como números, caracteres o strings; u
+                            otra variable que ya hayas establecido. Por el contrario, puedes evaluar si es
+                            desigual con (variable != #).
+                        </p>
+                    </li>
+                    <li><strong>Mayor, menor, etc</strong>
+                        <p>
+                            Del mismo modo, puedes ver si un valor numérico es mayor,
+                            menor, mayor o igual y menor o igual, como los siguientes ejemplos:          
+                        </p>
+                    </li>
+                </ul>
+                <pre style="font-size:  20px;"><code>
+    if(variable &lt; #){}
+    if(variable > #){}
+    if(variable &lt;= #){}
+    if(variable &lt;= #){}
+                </code></pre>
+                <p>
+                    Los condicionales pueden también seguir instrucciones diferentes de otras si la condición es false.
+                </p>
+                <pre style="font-size: 20px;"><code>
+if(condicion){
+    accion1();
+}else{
+    accion2();
+}
+                </code></pre>
+                <p>
+                    También existen los condicionales compuestos, que evalúan más de una condición a la vez
+                    con ayuda de los operadores lógicos “y”(&&) y “o” (||) como se muestra:
+                </p>
+                <pre style="font-size: 20px;"><code>
+if(condicion1 && condicion2){} // se cumple si ambas son true
+if(condicion1 || condicion2){} // se cumple con un solo true
+                </code></pre>
+                <p>
+                    Además, puedes anidar condicionales una dentro de otra, o usar else if para ir evaluando
+                    condiciones falsas hasta que una sea verdadera.
+                </p>
+                <pre style="font-size: 20px;"><code>
+// condicion anidada
+if(cond){
+    if(cond_anidada){
+        accion();
+    }
+}
+// condiciones else if
+if(cond1){}
+else if(cond2){}
+else if(cond3){}
+else {}
+                </code></pre>
+                <p>
+                    Así, puedes armar una estructura de condicionales para que se evalúen según los valores
+                    que tu desees.
+                </p>
+                <h3><strong>Switches</strong></h3>
+                <p>
+                    Un switch es una estructura condicional que evalúa una variable entre un conjunto de
+                    posibles valores, similar a una cadena de else if, con la ventaja de ser fácil de escribir.
+                </p>
+                <p>
+                    El switch funciona sólo para variables numéricas y char, ya que evalúa un único valor; y no
+                    puede medir si es mayor o menor que algo. Analiza el siguiente ejemplo.
+                </p>
+                <pre style="font-size: 20px;">
+//evaluar un valor numerico de tipo int
+switch(num){
+case 1: accion1(); break;
+case 2: accion2(); break;
+case 3: accino3(); break;
+default: accion_def(); break;
+}
+                </pre>
+                <p>
+                    La variable a evaluar va dentro de los paréntesis.
+                </p>
+                <p>
+                    Después del comando case va un posible valor, dos puntos y una instrucción a cumplir; y
+                    terminas con break para terminar de usar el switch.
+                </p>
+                <p>
+                    El default sirve como una instrucción en caso de que ningún caso se cumpla, y puedes
+                    dejarlo vacío si no necesitas código ahí.
+                </p>
+            </main>
+        </div>
+    </body>
+    </html>

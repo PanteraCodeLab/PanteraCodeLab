@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="/images/logo proyecto.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css" href = "/css/inicio.css"/>
+        <script src="/js/home.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <title>sepa la bola</title>
+    </head>
+    <body>
+        <div class="layout">
+            <div id="left-nav">
+                <h4 style="text-align:center; border-bottom: 1px solid black;"><strong>Manual de Programación CB28</strong></h4>
+                <ul>
+                    <div class="subnav">
+                        <a href="/index.html">
+                            <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>inicio</strong> <i class="fa fa-caret-down"></i></button>
+                        </a>
+                    </div>
+                    <div class="subnav">
+                        <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>recursos</strong><i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/html/recursos/aprender-logica.html">aprender lógica</a>
+                            <a href="/html/recursos/editores-de-codigo.html">editores de código</a>
+                            <a href="/html/recursos/paginas-programacion.html">páginas de programación</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>contenido</strong><i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/html/lecciones/leccion0.html">lección 0. logica de la programación</a>
+                            <a href="/html/lecciones/leccion1.html">lección 1. representación de algoritmos</a>
+                            <a href="/html/lecciones/leccion2.html">lección 2. variables y constantes</a>
+                            <a href="/html/lecciones/leccion3.html">lección 3. estructura del código en c++</a>
+                            <a href="/html/lecciones/leccion4.html">lección 4. entrada y salida</a>
+                            <a href="/html/lecciones/leccion5.html">lección 5. operaciones aritméticas</a>
+                            <a href="/html/lecciones/leccion6.html">lección 6. condicionales</a>
+                            <a href="/html/lecciones/leccion7.html">lección 7. bucles</a>
+                            <a href="/html/lecciones/leccion8.html">lección 8. bucles anidados</a>
+                            <a href="/html/lecciones/leccion9.html">lección 9. arreglos</a>
+                            <a href="/html/lecciones/leccion10.html">lección 10.arreglos dinámicos</a>
+                            <a href="/html/lecciones/leccion11.html">lección 11.punteros</a>
+                            <a href="/html/lecciones/leccion12.html">lección 12.funciones</a>
+                       </div>
+                    </div>
+                    
+                    <div class="subnav">
+                        <a href="/html/acercade.html">
+                            <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>acerca de</strong> <i class="fa fa-caret-down"></i></button>
+                        </a>
+                    </div>
+                    
+                </ul>
+
+                <h4 style="margin-top: auto; margin-bottom: 10px; text-align: center; font-size: 10px; color: black;">
+                    <strong>Cobach28 Panteras. 2026</strong>
+                </h4>        
+            </div> 
+            <main>
+                <h1><strong>lección 3</strong></h1>
+                <h2><strong>estructura del código en c++</strong></h2>
+                <p>
+                    Los lenguajes de programación siguen una sintaxis precisa para ejecutarse correctamente,
+                    y en lenguajes como C++ se requiere una estructura con la que tener los cimientos de un
+                    algoritmo.
+                </p>
+                <p> 
+                    Esta estructura consiste en las líneas de código que se desarrollan a continuación:
+                </p>
+                <img src="/imgs/lec3/starting_template.png">
+                <ul>
+                    <li><strong>#include &lt;iostream&gt;</strong>
+                        <p>
+                            Esta instrucción llama a un conjunto de funciones llamado
+                            librería; iostream es la librería que permite la entrada y salida de datos, por medio de
+                            una terminal (texto plano). TODA LIBRERÍA A SER UTILIZADA DEBE SER
+                            INCLUIDA
+                        </p>
+                    </li>
+                    <li><strong>using namespace std;</strong>
+                        <p>
+                            namespace std es un atajo para omitir la escritura del
+                            prefijo o namespace std::, que es muy recurrente al aprender a escribir código. Sin
+                            embargo, en proyectos avanzados no es recomendable.
+                        </p>
+                    </li>
+                    <li><strong>int main(){}</strong>
+                        <p>
+                            Esta es la estructura de una función, para ser precisos la función
+                            principal. Todo el código de C++ tiene la función main como punto de partida al
+                            ejecutar un código.
+                        </p>
+                    </li>
+                    <li><strong>Comentarios // </strong>
+                        <p>
+                            Las líneas que llevan // no fungen como instrucciones reales, son
+                            comentarios que sirven para tener notas sobre el código.
+                        </p>
+                    </li>
+                    <li><strong>return 0;</strong>
+                        <p>
+                            El comando return llama a terminar la función y devolver un número como
+                            código de salida, generalmente 0 para indicar que no hubo errores en el programa.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    A partir de esta base se pueden crear algoritmos que trabajan con la entrada y salida de
+                    datos entre el usuario y el algoritmo de la computadora.
+                </p>
+                <p>
+                    Esto se puede modificar de distintas maneras. Por ejemplo, agregando más librerías con
+                    más funciones que se requieran; como string, vector, math, entre otras; o bien, eliminando
+                    el atajo para el prefijo std::, si así se prefiere. El comando return puede ser omitido (lo cual
+                    hace que devuelva 0 por defecto) o hacer que devuelva un número diferente a 0.
+                </p>
+                <p>
+                    La única parte que debe escribirse forzosamente es la función principal, ya que sin ella, C++
+                    no tiene un punto por donde comenzar a ejecutarse.
+                </p>
+               
+            </main>
+        </div>
+    </body>
+    </html>

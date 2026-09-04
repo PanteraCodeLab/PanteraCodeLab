@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="/images/logo proyecto.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css" href = "/css/inicio.css"/>
+        <script src="/js/home.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <title>sepa la bola</title>
+    </head>
+    <body>
+        <div class="layout">
+            <div id="left-nav">
+                <h4 style="text-align:center; border-bottom: 1px solid black;"><strong>Manual de Programación CB28</strong></h4>
+                <ul>
+                    <div class="subnav">
+                        <a href="/index.html">
+                            <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>inicio</strong> <i class="fa fa-caret-down"></i></button>
+                        </a>
+                    </div>
+                    <div class="subnav">
+                        <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>recursos</strong><i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/html/recursos/aprender-logica.html">aprender lógica</a>
+                            <a href="/html/recursos/editores-de-codigo.html">editores de código</a>
+                            <a href="/html/recursos/paginas-programacion.html">páginas de programación</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>contenido</strong><i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/html/lecciones/leccion0.html">lección 0. logica de la programación</a>
+                            <a href="/html/lecciones/leccion1.html">lección 1. representación de algoritmos</a>
+                            <a href="/html/lecciones/leccion2.html">lección 2. variables y constantes</a>
+                            <a href="/html/lecciones/leccion3.html">lección 3. estructura del código en c++</a>
+                            <a href="/html/lecciones/leccion4.html">lección 4. entrada y salida</a>
+                            <a href="/html/lecciones/leccion5.html">lección 5. operaciones aritméticas</a>
+                            <a href="/html/lecciones/leccion6.html">lección 6. condicionales</a>
+                            <a href="/html/lecciones/leccion7.html">lección 7. bucles</a>
+                            <a href="/html/lecciones/leccion8.html">lección 8. bucles anidados</a>
+                            <a href="/html/lecciones/leccion9.html">lección 9. arreglos</a>
+                            <a href="/html/lecciones/leccion10.html">lección 10.arreglos dinámicos</a>
+                            <a href="/html/lecciones/leccion11.html">lección 11.punteros</a>
+                            <a href="/html/lecciones/leccion12.html">lección 12.funciones</a>
+                       </div>
+                    </div>
+                    
+                    <div class="subnav">
+                        <a href="/html/acercade.html">
+                            <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>acerca de</strong> <i class="fa fa-caret-down"></i></button>
+                        </a>
+                    </div>
+                    
+                </ul>
+
+                <h4 style="margin-top: auto; margin-bottom: 10px; text-align: center; font-size: 10px; color: black;">
+                    <strong>Cobach28 Panteras. 2026</strong>
+                </h4>        
+            </div> 
+            <main>
+                <h2><strong>aprender lógica</strong></h2>
+                <p>
+                    Contar con una lógica bien desarorllada a la hora de programar es algo ESENCIAL, pues en su núcleo,
+                    la programación no es más que lógica junto a matemáticas. Por eso a través de esta subpágina compartimos
+                    dos "lenguajes de programación" (Scratch y Karel) y un visualizador de diagramas de flujo (Raptor).
+                    <br><br>
+                </p>
+                <h3><strong>Raptor</strong></h3>
+                <p>
+                    Raptor es una herramienta que permite la visualización de diagramas de flujo a través de 6 bloques (entrada, llamada, asignación
+                    de variables, salida, bucle y condicional). Como es evidente, su principal uso es visualizar diagramas de flujo, sin embargo,
+                    no significa que no sea posible enseñar lógica computacional con esta herramienta.
+                    <br><br>
+                    <strong>Esta es la herramienta en la que nos enfocaremos en este manual.</strong>
+                    <br>
+                    <a href="https://www.raptor.martincarlisle.com/">raptor.martincarlisle.com</a>
+                </p>
+                
+                <h3><strong>Scratch</strong></h3>
+                <p>
+                    Scratch es un lenguaje de programación orientado a objetos creado por el MIT con el objetivo de facilitar el
+                    desarrollo de la lógica para personas de cualquier grupo de edad. Consiste en el uso de bloques para hacer que
+                    un gato, así como otros animales e individuos realicen acciones.
+                    <br>
+                    <a href="https://scratch.mit.edu/">scratch.mit.edu</a>
+                    <br>
+                    
+                </p>
+                <h3><strong>Karel</strong></h3>
+                <p>
+                    Karel o Karel el Robot es un lenguaje de programación que consiste en mover un pequeño robot con órdenes simples,
+                    bucles, así como otros comandos. Es utilizado en la Olimpiada Mexicana de Informática para sus participantes de 
+                    primaria y secundaria.
+                    <br>
+                    <a href="https://omegaup.com/karel.js/">omegaup.com/karel.js</a>
+                    <br>
+                    <a href="https://omegaup.com/karel.js/manual/Karel.html">enlace a tutorial de karel</a>
+                </p>
+                
+
+
+            </main>
+        </div>
+    </body>
+    </html>

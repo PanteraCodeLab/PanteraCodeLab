@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="/images/logo proyecto.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css" href = "/css/inicio.css"/>
+        <script src="/js/home.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <title>sepa la bola</title>
+    </head>
+    <body>
+        <div class="layout">
+            <div id="left-nav">
+                <h4 style="text-align:center; border-bottom: 1px solid black;"><strong>Manual de Programación CB28</strong></h4>
+                <ul>
+                    <div class="subnav">
+                        <a href="/index.html">
+                            <button class="subnavbtn">inicio <i class="fa fa-caret-down"></i></button>
+                        </a>
+                    </div>
+                    <div class="subnav">
+                        <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>recursos</strong><i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/html/recursos/aprender-logica.html">aprender lógica</a>
+                            <a href="/html/recursos/editores-de-codigo.html">editores de código</a>
+                            <a href="/html/recursos/paginas-programacion.html">páginas de programación</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <button class="subnavbtn" onclick="toggleDropdown(this)">contenido <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/html/lecciones/leccion0.html">lección 0. logica de la programación</a>
+                            <a href="/html/lecciones/leccion1.html">lección 1. representación de algoritmos</a>
+                            <a href="/html/lecciones/leccion2.html">lección 2. variables y constantes</a>
+                            <a href="/html/lecciones/leccion3.html">lección 3. estructura del código en c++</a>
+                            <a href="/html/lecciones/leccion4.html">lección 4. entrada y salida</a>
+                            <a href="/html/lecciones/leccion5.html">lección 5. operaciones aritméticas</a>
+                            <a href="/html/lecciones/leccion6.html">lección 6. condicionales</a>
+                            <a href="/html/lecciones/leccion7.html">lección 7. bucles</a>
+                            <a href="/html/lecciones/leccion8.html">lección 8. bucles anidados</a>
+                            <a href="/html/lecciones/leccion9.html">lección 9. arreglos</a>
+                            <a href="/html/lecciones/leccion10.html">lección 10.arreglos dinámicos</a>
+                            <a href="/html/lecciones/leccion11.html">lección 11.punteros</a>
+                            <a href="/html/lecciones/leccion12.html">lección 12.funciones</a>
+                        </div>
+                    </div>
+                    
+                    <div class="subnav">
+                        <a href="/html/acercade.html">
+                            <button class="subnavbtn" onclick="toggleDropdown(this)">acerca de <i class="fa fa-caret-down"></i></button>
+                        </a>
+                    </div>
+                    
+                </ul>
+
+                <h4 style="margin-top: auto; margin-bottom: 10px; text-align: center; font-size: 10px; color: black;">
+                    <strong>Cobach28 Panteras. 2026</strong>
+                </h4>        
+            </div> 
+            <main>
+                <h1><strong>lección 2</strong></h2>
+                <h2><strong>variables y constantes</strong></h2>
+                <p>
+                    Previo a cualquier otro tema debemos abarcar variables y constantes. La utilidad de la
+                    programación reside en gran parte en su capacidad para guardar datos.
+                </p>
+                <p>
+                    Para guardar datos por medio de la programación requerimos de la declaración de variables
+                    y constantes. Variable, por su nombre hace referencia a un valor que puede cambiar,
+                    constante lo opuesto, evidentemente
+                </p>
+                <p>
+                    En c++ las variables requieren de la especificación de un tipo de dato. No es posible colocar
+                    un número dentro de una caja que está orientada al guardado de palabras. Existen 5 tipos
+                    principales de datos en c++.
+                </p>
+                <ul> 
+                    <li><strong>int</strong>- números enteros</li>
+                    <li><strong>float</strong>- números de punto flotante (decimales)</li>
+                    <li><strong>char</strong>- caracteres (letras, caracteres especiales, entre otros)</li>
+                    <li><strong>string-</strong>- cadenas de caracteres (palabras, palabras con números)</li>
+                    <li><strong>bool</strong>- valores booleanos (falso o verdadero)</li>
+                </ul>
+                <p>
+                    Para declarar una variable en c++ es necesario colocar el tipo de dato, seguido de un
+                    nombre para la variable. El valor de la variable puede colocarse después antecedido por un
+                    signo de igualación “=”
+                </p>
+                <h3><strong>Estructura para declarar una variable</strong></h3>
+                <p>
+                    Tipo de dato + nombre = valor;
+                </p>
+                <h3><strong>Ejemplos:</strong></h3>
+                <ul>
+                    <li><strong>int</strong> edad = 17;</li>
+                    <li><strong>float</strong> estatura = 0.5;</li>
+                    <li><strong>char</strong> sexo = 'M';</li>
+                    <li><strong>string</strong> nombre="chinos";</li>
+                    <li><strong>bool</strong> adolescente=false;</li>
+                </ul>
+                <ul>
+                    <li>int edad2;</li>
+                    <li>float estatura2;</li>
+                    <li>char sexo;</li>
+                    <li>string nombre;</li>
+                    <li>bool adolescente2;</li>
+                </ul>
+                <p>
+                    Como podrás notar, algunas variables tienen algunos caracteres específicos notando el
+                    valor asignado. Este formato debe seguirse ESTRICTAMENTE, pues si no c++ pensará que
+                    estás usando el tipo de dato incorrecto con respecto a la variable.
+                    Los números sólo llevan el número, char lleva comillas simples entre sí, string lleva comillas
+                    dobles, booleanos sólo es true o false.
+                </p>
+                <p>
+                    Los nombres de las variables no pueden llevar números al inicio, caracteres especiales, entre otros.
+                </p>
+                <p>
+                    En el segundo conjunto de ejemplos no asignamos un valor a las variables. Como se
+                    mencionó previamente, esto es posible pues podemos asignar el valor en otro momento,
+                    pedírselo al usuario, etcétera
+                </p>
+                <p>
+                    Existen más tipos de datos en c++ para diferentes usos, esto de debe a que int, por
+                    ejemplo, sólo puede guardar un número entre -2,147,483,648 y 2,147,483,648 y float sólo
+                    puede guardar un número decimal con 7 puntos de precisión. Para guardar números más
+                    grandes se usa long long y para guardar números decimales con el doble de precisión
+                    puede hacerse uso del tipo de dato double.
+                </p>
+                <p>
+                    Por ahora quedémonos con los 5 tipos de datos mencionados anteriormente. 
+                </p>
+                <p>
+                    Para declarar constantes sólo faltaría agregar “const” antes del tipo de dato.
+                </p>
+                <h4><strong>Ejemplo:</strong></h4>
+                <ul>
+                    <li>const float PI = 3.14;</li>
+                    <li>const float eul = 2.71;</li>
+                </ul>
+                <p>
+                    Los valores constantes se mantienen como fueron declarados, su valor no puede cambiar.
+                </p>
+            </main>
+        </div>
+    </body>
+    </html>

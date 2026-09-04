@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="/images/logo proyecto.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css" href = "/css/inicio.css"/>
+        <script src="/js/home.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <title>sepa la bola</title>
+    </head>
+    <body>
+        <div class="layout">
+           <div id="left-nav">
+                <h4 style="text-align:center; border-bottom: 1px solid black;"><strong>Manual de Programación CB28</strong></h4>
+                <ul>
+                    <div class="subnav">
+                        <a href="/index.html">
+                            <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>inicio</strong> <i class="fa fa-caret-down"></i></button>
+                        </a>
+                    </div>
+                    <div class="subnav">
+                        <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>recursos</strong><i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/html/recursos/aprender-logica.html">aprender lógica</a>
+                            <a href="/html/recursos/editores-de-codigo.html">editores de código</a>
+                            <a href="/html/recursos/paginas-programacion.html">páginas de programación</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>contenido</strong><i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/html/lecciones/leccion0.html">lección 0. logica de la programación</a>
+                            <a href="/html/lecciones/leccion1.html">lección 1. representación de algoritmos</a>
+                            <a href="/html/lecciones/leccion2.html">lección 2. variables y constantes</a>
+                            <a href="/html/lecciones/leccion3.html">lección 3. estructura del código en c++</a>
+                            <a href="/html/lecciones/leccion4.html">lección 4. entrada y salida</a>
+                            <a href="/html/lecciones/leccion5.html">lección 5. operaciones aritméticas</a>
+                            <a href="/html/lecciones/leccion6.html">lección 6. condicionales</a>
+                            <a href="/html/lecciones/leccion7.html">lección 7. bucles</a>
+                            <a href="/html/lecciones/leccion8.html">lección 8. bucles anidados</a>
+                            <a href="/html/lecciones/leccion9.html">lección 9. arreglos</a>
+                            <a href="/html/lecciones/leccion10.html">lección 10.arreglos dinámicos</a>
+                            <a href="/html/lecciones/leccion11.html">lección 11.punteros</a>
+                            <a href="/html/lecciones/leccion12.html">lección 12.funciones</a>
+                       </div>
+                    </div>
+                    
+                    <div class="subnav">
+                        <a href="/html/acercade.html">
+                            <button class="subnavbtn" onclick="toggleDropdown(this)"><strong>acerca de</strong> <i class="fa fa-caret-down"></i></button>
+                        </a>
+                    </div>
+                    
+                </ul>
+
+                <h4 style="margin-top: auto; margin-bottom: 10px; text-align: center; font-size: 10px; color: black;">
+                    <strong>Cobach28 Panteras. 2026</strong>
+                </h4>        
+            </div> 
+            <main>
+                <h1><strong>lección 4</strong></h1>
+                <h2><strong>entrada y salida</strong></h2>
+                <p>
+                    La interacción entre el usuario y la máquina es fundamental para cualquier aplicación.
+                    En c++, esta se logra a través de comandos definidos en la librería &lt;iostream&gt;: cin y cout.
+                    C se refiere a character e in y out se refieren a entrada y salida, es decir salida y entrada de
+                    caracteres.
+                </p>
+                <p> 
+                    Para hacer uso de estas funciones, dentro de una función, en este caso int main() debe
+                    escribirse el nombre de la función, seguido de dos comparadores, una “boquilla”.                
+                </p>
+                
+                <img src="/imgs/lec4/hola_mundo.png">
+                <p>
+                    Como podrás notar, hacemos uso de las comillas dobles para envolver “hola mundo”, esto
+                    es debido a que “hola mundo” es un string. En caso de que escribieras hola mundo sin
+                    comillas, c++ pensaría que te encuentras haciendo referencia a dos variables; la variable
+                    hola y la variable mundo
+                </p>
+                <p>
+                    En CodeBlocks copia y pega este código, luego, compila y ejecuta. Notarás que una
+                    terminal similar se abre con el siguiente texto (en caso de que te encuentres en windows).
+                    En caso de que te encuentres usando macOS, alguna distribución de linux u otro sistema
+                    operativo que ejecute CodeBlocks la apariencia será distinta, sin embargo, la salida debería
+                    de ser la misma.
+                </p>
+                <img src="/imgs/lec4/out.png">
+                <p>
+                    La primera línea dice “hola mundo”, el mensaje que indicaste en tu código. En la segunda
+                    línea dice: process returned 0 (0x0) execution time : 0.168s, esto significa que la ejecución
+                    fue correcta y tu código llegó hasta el punto en el cual se retorna cero a la función main, es
+                    decir, el comando “return 0;” logró el fin del código exitosamente.
+                </p>
+                <p>
+                    Execution time se refiere al tiempo que estuvo el programa en ejecución, la última línea
+                    habla por sí misma.
+                </p>
+                <p>
+                    En caso de que quisiéramos crear un mensaje más largo, ej: decirle hola a alguien,
+                    podríamos hacer lo siguiente:
+                </p>
+                <img src="/imgs/lec4/hola_chinos.png">
+                <p>
+                    Como puedes notar, usamos dos de esas “boquillas” para separar una
+                    variable y “hola”.
+                </p>
+                <p>
+                    Si ejecutas el siguiente código, podrás notar que “hola” y “chinos”
+                    se encuentran juntos.
+                </p>
+                <img src="/imgs/lec4/out2.png">
+                <p>
+                    Esto se debe a que no especificamos que queríamos un espacio entre
+                    “hola” y “chinos”. Las instrucciones que se le dan a una computadora
+                    deben ser perfectas, la computadora no puede predecir.
+                </p>
+                <p>
+                    Si quisiéramos agregar este espacio, nuestro código se vería algo
+                    así:
+                </p>
+                <img src="/imgs/lec4/hola_chinos_espacio1.png">
+                <p> O algo así: </p>
+                <img src="/imgs/lec4/hola_chinos_espacio2.png">
+                <p>
+                    En el primer ejemplo sólo presionamos la barra espaciadora después
+                    de hola para agregar el caracter de espacio, en el segundo ejemplo
+                    agregamos otras “boquillas” para entonces colocar el caracter de
+                    espacio.
+                </p>
+                <p>
+                    Si ejecutamos cualquiera de estos dos códigos, obtendremos lo
+                    siguiente:
+                </p>
+                <img src="/imgs/lec4/out4.png">
+                <p>
+                    Ahora, con respecto a entrada de datos en c++ hacemos uso de la
+                    función “cin” y volteamos las “boquillas”.
+                </p>
+                <img src="/imgs/lec4/pedir_nombre.png">
+                <p>
+                    Como podrás notar, “nombre” no tiene ningún valor asignado pues se
+                    lo pediremos al usuario a través de la función “cin”. Sin embargo,
+                    una variable con un valor asignado a través de un signo de
+                    igualación puede obtener otro valor a través de la función “cin”.
+                </p>
+                <p>
+                    Si ejecutamos el código anterior sucederá lo siguiente:
+                </p>
+                <img src="/imgs/lec4/cursor.png">
+                <p>
+                    Aparecerá un pequeño cursor donde debes escribir un valor para meter
+                    a la variable nombre.
+                </p>
+                <img src="/imgs/lec4/out5.png">
+                <p> 
+                    Se metió el valor “sebas”, sin embargo no obtenemos ninguna salida debido a que no hemos indicado que debe haber una salida.
+                </p>
+                <img src="/imgs/lec4/out6.png">
+                <p> 
+                    Editando el código de la siguiente manera, obtendremos una salida acorde al valor que hayamos metido a esta variable.
+                </p>
+                <img src="/imgs/lec4/out7.png">
+                
+                
+               
+            </main>
+        </div>
+    </body>
+    </html>
