@@ -62,7 +62,52 @@
                 </h4>        
             </div>  
             <main>
-                <h1>WIP</h1>
+                <h1><strong>lección 8</strong></h1>
+                <h2><strong>bucles anidados</strong></h2>
+                <p>
+                    Puedes ejecutar un bucle dentro de otro bucle, lo que significa una serie de “repeticiones que se repiten”, observa el ejemplo:
+                </p>
+                <pre style="font-size: 20px;"><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+int n = 10, m = 5;
+for(int i = 0; i &lt; n; i++){
+		for(int j = 0; j &lt; m; j++){
+			cout &lt;&lt; “# ”;
+		}
+		cout &lt;&lt; ‘\n’;
+	}
+}
+                </code></pre>
+                <p>
+                    Este es un algoritmo que utiliza un bucle anidado para escribir un rectángulo de caracteres #. El primer bucle va a separar n líneas con un carácter de enter, y el segundo escribe los símbolos # con un espacio la cantidad de veces m; lo que da la siguiente salida:
+                </p>
+                <img src="../../imgs/lec8/sqr.png">
+                <p>
+                    Puedes hacer un bucle de bucle de bucle (anidar 3 bucles), anidar 4, 5... los bucls que quieras, sin embargo, cada uno deberá tener
+                    un contador diferente (notando claro el diseño del código), he ahí por que se usan convencionalmente las letras i,j,k para los bucles.
+                </p>
+                <p>
+                    Los bucles while y do while también pueden ser anidados.
+                </p>
+                <pre style="font-size: 20px;"><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+int n = 10, m = 5, o=5;
+for(int i = 0; i &lt; n; i++){
+	for(int j = 0; j &lt; m; j++){
+            for(int k=0;k&lt;o; k++){
+			    cout &lt;&lt; “# ”;
+            }
+	}
+	cout &lt;&lt; ‘\n’;
+	}
+    cout &lt;&lt; '\n';
+}
+                </code></pre>
+        
             </main>
         </div>
     </body>
