@@ -62,7 +62,142 @@
                 </h4>        
             </div>  
             <main>
-                <h1>WIP</h1>
+                <h1><strong>lección 7</strong></h1>
+                <h2><strong>bucles</strong></h2>
+                <p>
+                    La repetición de comandos es muy recurrente en la programación, y para evitar escribir
+                    múltiples veces el mismo código, existen los bucles, que repiten dicha instrucción según lo
+                    dicte una condición
+                </p>
+
+                <h3>while</h3>
+                <p>
+                    Un bucle while repite sus comandos mientras una condición sea verdadera, tiene una
+                    estructura igual al condicional if:
+                </p>
+                <pre style="font-size: 20px;"><code>
+while(condicion){
+    accion1();
+    condicion = false;
+}
+                </code></pre>
+                <p>
+                    Cabe mencionar que la condición que evalúa generalmente tiene la posibilidad de cambiar
+                    mientras el bucle se repite, ya que si no cambia, se repetirá indefinidamente. Si la condición
+                    es falsa desde un inicio, el bucle no comenzará
+                </p>
+                <p>Un ejemplo de programa que puede hacerse con un bucle while es el siguiente:</p>
+                <pre style="font-size: 20px;"><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    bool adolescente = true;
+    edad = 13;
+    <span style="color: #41913c;" >
+    //para hacer algo mientras es falso o verdadero solo agregamos un booleano para verdadero. en caso de querer decir
+    //mientras algo no verdadero se agrega un signo de exclamación
+    //ej. while(!adolescente)</span>
+    while(adolescente){ 
+        cout &gt;&gt; "sos adolescente" &gt;&gt; endl; <span style="color: #41913c;" >// decimos que es adolescente</span>
+        edad++; <span style="color: #41913c;" >// se agrega 1 a edad cada repetición</span>
+        if(edad &gt;= 18){
+            <span style="color: #41913c;" >
+            //cuando la edad esa mayor o igual a 18 terminar bucle y sacar el siguiente mensaje</span>
+            cout &gt;&gt; "te toca sacar la INE flojo flojo flojo flojo" &gt;&gt; endl;
+            <span style="color: #41913c;" >
+            //colocar adolescente=false para que termine el bucle</span>
+            adolescente=false;
+        }
+        
+    }
+}
+                </code></pre>
+                
+                <h3>do while</h3>
+                <p>
+                    El bucle do while es similar a un while ordinario, su única diferencia es que primero hace
+                    una repetición de las instrucciones, y luego evalúa si la condición se sigue cumpliendo.    
+                </p>
+                <pre style="font-size: 20px;"><code>
+do{
+    accion1();
+}while(condicion);
+                </code></pre>
+                <p>Este bucle termina con un ; como una instrucción odinaria.</p>
+                <h3>For</h3>
+                <p>
+                    Un bucle for repite las instrucciones aplicando un contador, que se escribe de la siguiente
+                    manera:
+                </p>
+                <pre style="font-size:20px;"><code>
+for(int i = 0; i &lt; 10; i++){}
+                </code></pre>
+                <p>
+                    Primero se declara un contador de tipo entero, que por lo general se le da el nombre de i y
+                    comienza en 0.
+                </p>
+                <p>
+                    Después, se le da un límite con una condicional. En este caso, se dice que i sea menor a
+                    10. <br> Y que el contador aumenta en determinada cantidad, como usando i++ para que
+                    aumente en 1 por cada repetición
+                </p>
+                <p>
+                    En otras palabras, comienza a contar desde 0, hasta 10 y contando de 1 en 1.
+                </p>
+                <p>
+                    Cada uno de los valores se puede cambiar, según lo que se quiera hacer. <br> Ya sea comenzar
+                    de otro número, agregar un valor diferente cada vez que se repit el bucle, contar con un límite distinto, etc.
+                </p>
+                <p> 
+                    Las variables encontradas en el punto donde defines tu contador, condicional y modificación NO pueden utilizarse
+                    fuera del bucle. <br> Solo puedes hacer uso de las variables que declares fuera del bucle dentro del bucle.
+                </p>
+                <p>
+                    Un ejemplo código que puede crearse con un bucle while sería el siguiente:
+                </p>
+            
+                <pre style="font-size: 20px;"><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    <span style="color: #41913c;" >
+    //código para sacar todos los números del 1 al 100
+    //for que inicia en 1 y termina en 100. se agrega uno cada vez que se repiten </span>
+    for(int i=1;i&lt;=100; i++){
+        //se saca el número actual
+        cout &lt;&lt; i &lt;&lt; endl;
+    }
+}
+                </code></pre>
+                <p>O este otro:</p>
+                <pre style="font-size: 20px;"><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    <span style="color: #41913c;" >
+    //código para decirle 10 veces hola a alguien</span>
+    for(int i=1;i&lt;=10; i++){
+        cout &lt;&lt; "hola" &lt;&lt; endl;
+    }
+}
+                </code></pre>
+                <hr>
+                <h3>problemas</h3>
+                <p>
+                    La neta no estoy seguro de que decir... toma tus problemas y ya jeje.<br>
+                    En caso de que tengas dudas revisa las páginas encontradas en: <br>
+                    <a href="../recursos/paginas-programacion.html">recursos</a>
+                </p>
+                <p>
+                   No vayas a usar ninguna inteligencia artifical, copiar, etc etc. <br>
+                   Si haces eso ¿cuál es el chiste carnal? 
+                </p>
+                <ul>
+                    <li><a href="https://omegaup.com/arena/problem/ciclo_mientras_no_cero">PROBLEMA 1</a></li>
+                    <li><a href="https://omegaup.com/arena/problem/Mensaje-de-Amor">PROBLEMA 2</a></li>
+                    <li><a href="https://omegaup.com/arena/problem//El-problema-3n1">PROBLEMA 3</a></li>
+                    <li><a href="https://omegaup.com/arena/problem/La-secuencia-infinita">PROBLEMA 4</a></li>
+                </ul>
             </main>
         </div>
     </body>

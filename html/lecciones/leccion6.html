@@ -83,7 +83,7 @@
                 </p>
                 <pre style="font-size: 20px;"><code>
 if(condición){
-    acción1(); // considera acción como la instrucción que quieres que se cumpla
+    acción1(); <span style="color: #41913c;" >// considera acción como la instrucción que quieres que se cumpla </span>
 }
                 </code></pre>
                 <p>
@@ -112,11 +112,32 @@ if(condición){
                     </li>
                 </ul>
                 <pre style="font-size:  20px;"><code>
-    if(variable &lt; #){}
-    if(variable > #){}
-    if(variable &lt;= #){}
-    if(variable &lt;= #){}
+if(variable &lt; #){}
+if(variable > #){}
+if(variable &lt;= #){}
+if(variable &lt;= #){}
                 </code></pre>
+                <p>Un ejemplo de esto sería</p>
+                <pre style="font-size : 20px;"><code>
+#include &lt;iostream&gt; 
+using namespace std;
+int main{
+        <span style="color: #41913c;" >
+        //código para checar si una persona con una edad dada es adolescente
+        </span>
+        int edad;
+        cin >> edad;
+        <span style="color: #41913c;" >
+        //checamos si edad es mayor o igual a 13
+        </span>
+        if(edad >= 13){
+            cout &lt;&lt; "eres adolescente guao omaga guao" &lt;&lt; endl;
+        }
+}
+                </code></pre>
+                <p>
+                    Este código es un cuanto... erróneo pues clasificara a un señor de 65 como adolescente.
+                </p>
                 <p>
                     Los condicionales pueden también seguir instrucciones diferentes de otras si la condición es false.
                 </p>
@@ -127,6 +148,22 @@ if(condicion){
     accion2();
 }
                 </code></pre>
+                <p>Un ejemplo de aplación de esto sería: </p>
+                <pre style="font-size: 20px"><code>
+#include &lt;iostream&gt; 
+using namespace std;
+int main(){
+    string profesion;
+    cin >> profesion;
+    if(profesion=="maestro"){
+        cout &lt;&lt; "te pagaremos poco aunque te encuentres preparando a la sociedad del mañana" &lt;&lt; endl;
+    }else if(profesion=="investigador"){
+        cout &lt;&lt; "te pagaremos poco aunque tus descubrimientos sean la razón por la cual <br> la mayor parte de los avances de la sociedad han sido posibles" &lt;&lt; endl; 
+    }else{
+        cout &lt;&lt; "no estoy seguro que poner aquí" &lt;&lt; endl; 
+    }
+}
+                </code></pre>
                 <p>
                     También existen los condicionales compuestos, que evalúan más de una condición a la vez
                     con ayuda de los operadores lógicos “y”(&&) y “o” (||) como se muestra:
@@ -134,6 +171,33 @@ if(condicion){
                 <pre style="font-size: 20px;"><code>
 if(condicion1 && condicion2){} // se cumple si ambas son true
 if(condicion1 || condicion2){} // se cumple con un solo true
+                </code></pre>
+                <p>
+                    Mejoremos el código de los grupos de edad, pues no queremos llamar erróneamente a un señor de 65 años.
+                </p>
+                <pre style="font-size: 20px;"><code>
+#include &lt;iostream&gt; 
+using namespace std;
+int main(){
+    int edad;
+    cin >> edad;
+
+    <span style="color: #41913c;" >// si es adolescente
+    // digo 20 por nineteen</span>
+    if(edad &gt;= 13 && edad &lt; 20){
+        cout &lt;&lt; "adolescente" &lt;&lt; endl;
+    <span style="color: #41913c;" >
+    // si es adulto previo a ser abuelo</span>
+    }else if(edad &gt;= 20 && edad &lt; 65){
+        cout &lt;&lt; "adulto" &lt;&lt; end;
+    <span style="color: #41913c;" >
+    // si es abuelo</span>
+    }else if(edad &gt;=65 && edad &lt; 130){
+        cout &lt;&lt; "abuelito" &lt;&lt; endl; 
+    }else{
+        cout &lt;&lt; "no estoy seguro que poner aqui" &lt;&lt; endl;
+    }
+}
                 </code></pre>
                 <p>
                     Además, puedes anidar condicionales una dentro de otra, o usar else if para ir evaluando
@@ -185,7 +249,32 @@ default: accion_def(); break;
                     El default sirve como una instrucción en caso de que ningún caso se cumpla, y puedes
                     dejarlo vacío si no necesitas código ahí.
                 </p>
+                <hr>
+                <h3>problemas</h3>
+                <p>
+                    La neta no estoy seguro de que decir... toma tus problemas y ya jeje.<br>
+                    En caso de que tengas dudas revisa las páginas encontradas en: <br>
+                    <a href="../recursos/paginas-programacion.html">recursos</a>
+                </p>
+                <p>
+                   No vayas a usar ninguna inteligencia artifical, copiar, etc etc. <br>
+                   Si haces eso ¿cuál es el chiste carnal? 
+                </p>
+                
+                <a></a>
+                <ul>
+                    <li><a href="https://omegaup.com/arena/problem/Par-o-Impar">PROBLEMA 1</a></li>
+                    <li><a href="https://omegaup.com/arena/problem/Ordenando-numeros/"> PROBLEMA 2</a></li>
+                    <li><a href="https://omegaup.com/arena/problem/Cuantos-dias-tiene-febrero">PROBLEMA 3</a></li>
+                    <li><a href="https://omegaup.com/arena/problem/Tipos-de-Triangulos/">PROBLEMA 4</a></li>
+                    <li><a href="https://omegaup.com/arena/problem/Una-serie-poco-interesante/">PROBLEMA 5</a></li>
+                    <li><a href="	https://omegaup.com/arena/problem/Calculos-condicionales" >PROBLEMA 6</a></li>
+                </ul>
+                <p><strong>NOTA</strong></p>
+                <p>Para resolver problemas relacionados con residuos de división, leer la siguiente página</p>
+                <a href="https://www.geeksforgeeks.org/cpp/modulo-operator-in-c-cpp-with-examples/">mod</a>
             </main>
+
         </div>
     </body>
     </html>
