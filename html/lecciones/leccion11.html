@@ -62,7 +62,76 @@
                 </h4>        
             </div>  
             <main>
-                <h1>WIP</h1>
+                <h2>lección 11</h2>
+                <h2>punteros</h2>
+                <p>Las variables de C++ son más que solo su valor, se declaran con un identificador y tienen una dirección en la memoria. Al usar una variable, estás accediendo a la dirección donde su valor se almacena.</p>
+                <p>Del mismo modo, las direcciones de memoria se pueden guardar en punteros. Los punteros guardan la dirección de memoria de una variable para dirigirse a ella cuando se use. Observa el diagrama:</p>
+                <img src="../../imgs/lec11/ptr.png">
+                <p>
+                    Si intentas ver que hay en un puntero usando cout, verás la dirección de memoria que este guarda, observa las diferentes salidas:
+                </p>
+                <pre style="font-size: 20px"><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+	int n = 10;
+	int* ptr = &amp;n;
+	
+	cout &lt;&lt; n &lt;&lt; '\n';
+	cout &lt;&lt; ptr &lt;&lt; '\n';
+	cout &lt;&lt; *ptr &lt;&lt; '\n';
+	return 0;
+}
+                </code></pre>
+                <img src="../../imgs/lec11/loc.png">
+                <p>Primero, se muestra el valor de n, que es 10; después, ptr nos mostró dónde se almacena n; y finalmente, *ptr apunta al valor alojado en la dirección, que vuelve a ser 10; esto se llama desreferenciar.</p>
+                <ul>
+                    <li>Para punteros *</li>
+                    <li>Para direcciones &</li>
+                </ul>
+                <p>También, es importante diferenciar la dirección que guarda un puntero a la dirección propia del mismo, de la siguiente manera:</p>
+                <img src="../../imgs/lec11/ptr2.png">
+                <p>
+                    Los punteros tienen su dirección propia, por lo tanto, puede ser apuntada hacia ella por otros punteros, llamados punteros dobles.
+                </p>
+                <p>
+                    Los punteros pueden ser declarados sin ninguna dirección que apuntar, pero esto lleva a comportamiento indeterminado o errores de segmentación. Como alternativa, se pueden declarar punteros vacíos con el valor nullptr, de la siguiente manera:
+                </p>
+                <pre style="font-size: 20px;"><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    <span style="color: #41913c;">//puntero sin valor, indeterminado</span>
+    int* ptr1;
+    <span style="color: #41913c;">//puntero nulo, valor 0</span>
+    int* ptr2 = nullptr;//puntero nulo, valor 0
+
+return 0;
+}
+                </code></pre>
+                <p>
+                    Los punteros estrictamente tienen un tipo de dato al cual apuntar, a menos que se usen punteros void.
+                </p>
+                <h3>Punteros void</h3>
+                <p>
+                    Los punteros void pueden almacenar la dirección de cualquier tipo de dato, sin importar si le cambian la dirección. Siempre y cuando hagas la conversión al momento de desreferenciar dicho puntero, usando static_cast<>():
+                </p>
+                <pre style="font-size: 20px;"><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+	int n = 10;
+	string s = “algoritmo”;
+
+	void* ptr = &amp;n;
+        <span style="color:#41913c">//notar el cambio en el tipo de dato</span>
+	ptr = &amp;s;
+
+	cout &lt;&lt; *(static_cast&lt;int*&gt;(ptr));
+        return 0;
+}
+
+                </code></pre>
             </main>
         </div>
     </body>
