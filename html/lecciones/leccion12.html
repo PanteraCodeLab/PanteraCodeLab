@@ -62,7 +62,136 @@
                 </h4>        
             </div>  
             <main>
-                <h1>WIP</h1>
+                <h2>lección 12</h2>
+                <h2>funciones</h2>
+                <p>
+                    Hasta este punto, hemos trabajado todo nuestro código dentro de la función main, dado que C++ la toma como punto de inicio. Sin embargo, podemos implementar nuevas funciones fuera de este alcance, y que podemos llamar a ejecutar, pasando datos llamados parámetros.
+                </p>
+                <p>
+                    La estructura de una función es la siguiente:
+                </p>
+                <pre><code>
+<span style="color: #41913c;">//tipo nombre (parámetros) {cuerpo}</span>   
+	void queque(){
+		cout &lt;&lt; “Quiero queque\n”;
+	}
+//llamada a la funcion: queque();
+                </code></pre>
+                <p>
+Este ejemplo es una función void, es decir, no va a devolver un dato específico cuando sea llamada, sino que solamente ejecutará un conjunto de instrucciones.
+Podemos hacer que una función devuelva un dato, usando el comando return y pasándole datos iniciales como argumentos:
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+<span style="color:#41913c">
+//se declara la función según el tipo de dato que devuelva
+//en este caso, int
+</span>
+int sumar(int n1, int n2){
+    return n1 + n2;
+}
+int main(){
+    int a = 5;
+    int b = 10;
+<span style="color:#41913c">//llamada a la funcion, pasando a y b como argumentos</span>
+    cout &lt;&lt; sumar(a, b);
+
+return 0;
+}
+<img src="../../imgs/lec12/outs.png">
+                </code></pre>
+                <h3>Alcance de variables</h3>
+                <p>
+                    Las variables dentro de una función son accesibles únicamente para todo lo que esté dentro de dicha función, es decir, no se puede llamar una función externa y operar con variables que no le pertenecen, ya que no las conoce. Observa el ejemplo:
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+void imprimir(){
+    cout &lt;&lt; s;
+}
+int main(){
+    string s = "pantera";
+
+    imprimir(s);
+    return 0;
+}
+
+                </code></pre>
+                <p>
+                    Este código no será válido, ya que la variable s está fuera del alcance de la función imprimir, la forma correcta es pasar s como argumento:
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+void imprimir(string s){
+    cout &lt;&lt; s;
+}
+
+int main(){
+    string s = "pantera";
+
+    imprimir(s);
+    return 0;
+}
+                </code></pre>
+                <p>
+                    Cabe aclarar que no se trata del mismo string, sino que la función imprimir ha creado su propia variable string, y copiado el valor de la variable que se le pasa como argumento. Las variables fueron coloreadas para resaltar la diferencia.
+                    De cualquier forma, el parámetro string puede tener cualquier identificador, no necesariamente se debe llamar igual que la variable que se pasa.
+                </p>
+                <p>
+                    Por fuera de todas las funciones, está el alcance global, esto es, declarar una variable fuera de las funciones al alcance de todas, generalmente en la parte de arriba:
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+<span style="color:#41913c">
+//variable global
+</span>
+string s = "alcance";
+
+void imprimir(){
+    cout &lt;&lt; s;
+}
+
+int main(){
+    cout &lt;&lt; s;
+
+    imprimir();
+
+return 0;
+}
+
+                </code></pre>
+                <p>
+                    Ninguna de las funciones tiene parámetros ni declara variables, solo hay un string de alcance global, al que todas las funciones pueden acceder.
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+<span style="color:#41913c">
+//las referencias se escriben con &
+</span>
+void masUno(int& n){
+    n++;
+}
+
+int main(){
+    int a = 9;
+    masUno(a);
+
+    cout &lt;&lt; a;
+
+return 0;
+}
+
+                </code></pre>
+                <img src="../../imgs/lec12/otss.png">
             </main>
         </div>
     </body>

@@ -75,7 +75,7 @@
                     Un bucle while repite sus comandos mientras una condición sea verdadera, tiene una
                     estructura igual al condicional if:
                 </p>
-                <pre style="font-size: 20px;"><code>
+                <pre><code>
 while(condicion){
     accion1();
     condicion = false;
@@ -87,7 +87,7 @@ while(condicion){
                     es falsa desde un inicio, el bucle no comenzará
                 </p>
                 <p>Un ejemplo de programa que puede hacerse con un bucle while es el siguiente:</p>
-                <pre style="font-size: 20px;"><code>
+                <pre><code>
 #include &lt;iostream&gt;
 using namespace std;
 int main(){
@@ -118,7 +118,7 @@ int main(){
                     El bucle do while es similar a un while ordinario, su única diferencia es que primero hace
                     una repetición de las instrucciones, y luego evalúa si la condición se sigue cumpliendo.    
                 </p>
-                <pre style="font-size: 20px;"><code>
+                <pre><code>
 do{
     accion1();
 }while(condicion);
@@ -129,7 +129,7 @@ do{
                     Un bucle for repite las instrucciones aplicando un contador, que se escribe de la siguiente
                     manera:
                 </p>
-                <pre style="font-size:20px;"><code>
+                <pre><code>
 for(int i = 0; i &lt; 10; i++){}
                 </code></pre>
                 <p>
@@ -156,7 +156,7 @@ for(int i = 0; i &lt; 10; i++){}
                     Un ejemplo código que puede crearse con un bucle while sería el siguiente:
                 </p>
             
-                <pre style="font-size: 20px;"><code>
+                <pre><code>
 #include &lt;iostream&gt;
 using namespace std;
 int main(){
@@ -170,7 +170,7 @@ int main(){
 }
                 </code></pre>
                 <p>O este otro:</p>
-                <pre style="font-size: 20px;"><code>
+                <pre><code>
 #include &lt;iostream&gt;
 using namespace std;
 int main(){
@@ -181,6 +181,61 @@ int main(){
     }
 }
                 </code></pre>
+                <h3>continue y break</h3>
+                <p>
+                    Los comandos continue y break sirven para saltar una iteración en un ciclo y para salir de él respectivamente. en cualquier parte que sean escritos cumplirán dicha función.
+                </p>
+                <p>
+                    Si tenemos el siguiente bucle:
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    for(int i = 1; i &lt;= 5; i++){
+		if(i == 3) continue;
+		cout &lt;&lt; i &lt;&lt; “ “;   
+    }   
+}
+
+                </code></pre>
+                <p>
+                    La salida serán los números del 1 al 5, pero omitiendo el 3 por la orden continue:
+                </p>
+                <img src="../../imgs/lec6/continue.png">
+                <p>
+                    Por otro lado, si reemplazamos continue con break:
+                </p>
+                <pre><code>
+
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    for(int i = 1; i &lt;= 5; i++){
+		if(i == 3) break;
+		cout &lt;&lt; i &lt;&lt; “ “;   
+    }   
+}
+                </code></pre>
+                <p>
+                    El bucle se terminará antes de escribir el número 3:
+                </p>
+                <img src="../../imgs/lec6/break.png">
+                <p>Esto funciona de la misma manera en bucles while y do while. Veamos el siguiente ejemplo: </p>
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+while(true){
+	char salir;
+	cout &lt;&lt; “escribe \'s\' para salir: ”;
+	cin >> salir;
+	if(salir == 's') break;
+}
+                </code></pre>
+                <p>
+                    Este código abre un bucle while que se repetirá por siempre, pero da la opción de salir de él si escribimos 's' (sin las comillas) como valor de un char, con lo que se llama al comando break para salir:
+                </p>
+                <img src="../../imgs/lec6/while_break.png">
                 <hr>
                 <h3>problemas</h3>
                 <p>

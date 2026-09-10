@@ -81,7 +81,7 @@
                 <p>
                     Su estructura es la siguiente:
                 </p>
-                <pre style="font-size: 20px;"><code>
+                <pre><code>
 if(condición){
     acción1(); <span style="color: #41913c;" >// considera acción como la instrucción que quieres que se cumpla </span>
 }
@@ -111,14 +111,14 @@ if(condición){
                         </p>
                     </li>
                 </ul>
-                <pre style="font-size:  20px;"><code>
+                <pre><code>
 if(variable &lt; #){}
 if(variable > #){}
 if(variable &lt;= #){}
 if(variable &lt;= #){}
                 </code></pre>
                 <p>Un ejemplo de esto sería</p>
-                <pre style="font-size : 20px;"><code>
+                <pre><code>
 #include &lt;iostream&gt; 
 using namespace std;
 int main{
@@ -141,7 +141,7 @@ int main{
                 <p>
                     Los condicionales pueden también seguir instrucciones diferentes de otras si la condición es false.
                 </p>
-                <pre style="font-size: 20px;"><code>
+                <pre><code>
 if(condicion){
     accion1();
 }else{
@@ -149,7 +149,7 @@ if(condicion){
 }
                 </code></pre>
                 <p>Un ejemplo de aplación de esto sería: </p>
-                <pre style="font-size: 20px"><code>
+                <pre><code>
 #include &lt;iostream&gt; 
 using namespace std;
 int main(){
@@ -168,14 +168,14 @@ int main(){
                     También existen los condicionales compuestos, que evalúan más de una condición a la vez
                     con ayuda de los operadores lógicos “y”(&&) y “o” (||) como se muestra:
                 </p>
-                <pre style="font-size: 20px;"><code>
+                <pre><code>
 if(condicion1 && condicion2){} // se cumple si ambas son true
 if(condicion1 || condicion2){} // se cumple con un solo true
                 </code></pre>
                 <p>
-                    Mejoremos el código de los grupos de edad, pues no queremos llamar erróneamente a un señor de 65 años.
+                    Mejoremos el código de los grupos de edad, pues no queremos llamar erróneamente a un señor de 65 años adolescente.
                 </p>
-                <pre style="font-size: 20px;"><code>
+                <pre><code>
 #include &lt;iostream&gt; 
 using namespace std;
 int main(){
@@ -203,7 +203,7 @@ int main(){
                     Además, puedes anidar condicionales una dentro de otra, o usar else if para ir evaluando
                     condiciones falsas hasta que una sea verdadera.
                 </p>
-                <pre style="font-size: 20px;"><code>
+                <pre><code>
 // condicion anidada
 if(cond){
     if(cond_anidada){
@@ -229,7 +229,7 @@ else {}
                     El switch funciona sólo para variables numéricas y char, ya que evalúa un único valor; y no
                     puede medir si es mayor o menor que algo. Analiza el siguiente ejemplo.
                 </p>
-                <pre style="font-size: 20px;">
+                <pre>
 //evaluar un valor numerico de tipo int
 switch(num){
 case 1: accion1(); break;

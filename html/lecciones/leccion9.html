@@ -62,8 +62,177 @@
                 </h4>        
             </div>  
             <main>
-                <h1>WIP</h1>
+                <h1><strong>lección 9</strong></h1>
+                <h2><strong>arreglos</strong></h2>
+                <p>
+                    Si las variables son cajas, los arreglos son cajas de cajas. Los arreglos, dado un tamaño N, guardarán N elementos a los cuales podrás hacers
+                    referencia por medio de un índice, que va desde 0 hasta hasta n-1
+                </p>
+                <p>
+                    Es decir, podemos, por ejemplo tener un arreglo de galletas que tiene 4 galletas:
+                </p>
+                <p>
+                    Galleta de chispas - 0
+                    Galleta funfetti - 1
+                    Galleta doble chocolate - 2
+                    Galleta de oreo - 3
+                </p>
+                <p>
+                    En código, esto sería algo así:
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    string galletas[4]={"Galleta de chispas", "Galleta funfeti", "Galleta doble chocolate", "Galleta de oreo"};
+}
+                </code></pre>
+                <p>Como podrás notar, al inicio pusimos "string" para indicar que el tipo de dato a guardar en el arreglo es string. No podemos guardar strings en
+                    un arreglo de enteros. Seguido de esto, agregamos un tamaño entre corchetes, un arreglo tiene un tamaño fijo, cuando su tamaño es declarado no podrá cambiar.
+                    Solo sus elementos pueden cambiar.
+                </p>
+                <p>
+                    Después de haber colocado el tamaño entre curly braces metimos los datos separados con comas rodeados por comilla doble debido a que son strings.
+                </p>
+                <p>En caso de querer acceder a uno de los valores guardados en el arreglo, haríamos lo siguiente:</p>
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    string galletas[4]={"Galleta de chispas", "Galleta funfeti", "Galleta doble chocolate", "Galleta de oreo"};
+    cout &lt;&lt; galletas[0];
+}
+                </code></pre>
+                <p>Nuestra salida sería: </p>
+                <p>Podemos hacer esto para todos los elementos, también, podemos guardar un elemento de un arreglo en una variable</p>
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    string galletas[4]={"Galleta de chispas", "Galleta funfeti", "Galleta doble chocolate", "Galleta de oreo"};
+    string posicion0 = galletas[0];
+    cout &lt;&lt; posicion0;
+}
+                </code></pre>
+            <p>Con los arreglos también es posible dejar un tamaño declarado y luego colocar los elementos dentro</p>
+            <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int numeros[4];
+    int numero;
+    cin >> numero; 
+    numeros[0]=numero;
+    cin >> numero;
+    numeros[1]=numero;
+    cin >> numero;
+    numeros[2]=numero;
+    cin >> numero;
+    numeros[3]=numero;
+    
+    cout &lt;&lt; numeros[0] &lt;&lt; endl;
+    cout &lt;&lt; numeros[1] &lt;&lt; endl;
+    cout &lt;&lt; numeros[2] &lt;&lt; endl;
+    cout &lt;&lt; numeros[3] &lt;&lt; endl;
+}
+            </code></pre>
+            <p>Como podrás imaginar, esta tarea puede facilitarse haciendo uso de los bucles</p>
+            <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int numeros[4];
+    int numero; 
+    for(int i=0;i&lt;4; i++){
+        cin &gt;&gt; numero;
+        numeros[i]=numero;
+    }
+    
+    for(int i=0;i&lt;4; i++){
+        cout &lt;&lt; numeros[i] &lt;&lt; endl;
+    }
+}
+            </code></pre>
+            <p>La salida de este código sería igual a la anterior:</p>
+            <p>Los arreglos pueden tener múltiples dimensiones, es decir, puedes tener un arreglo de arregos, un arreglo de arreglo de arreglos... etc. 
+                Aquí un arreglo bidimensional;
+            </p>
+            <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+	int arr[4][4]={{5,5,5,5},{4,4,4,4},{3,3,3,3}, {2,2,2,2}};
+    <span style="color: #41913c;" >//hacemos uso de un bucle anidado</span>
+     <span style="color: #41913c;" >//vamos por todas las filas del arreglo</span>
+	for(int i=0;i&lt;4;i++){
+         <span style="color: #41913c;" >//vamos por todas las columnas del arreglo</span>
+		for(int j=0;j&lt;4;j++) cout &lt;&lt; arr[i][j] &lt;&lt; '\n';
+	}
+}
+            </code></pre>
+            <p>También podemos meter los elementos al arrelgo</p>
+            <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+	int arr[4][4];
+    for(int i=0;i&lt;4;i++){
+        for(int j=0;j&lt;4;j++){
+            <span style="color: #41913c;" >//podemos pedir los elementos directamente</span>
+            cin &gt;&gt; arr[i][j];
+        }
+    }
+	for(int i=0;i&lt;4;i++){
+		for(int j=0;j&lt;4;j++){
+            cout &lt;&lt; arr[i][j] &lt;&lt; '\n';
+        }
+	}
+}
+            </code></pre>
+            <p>Como son variables guardadas dentro de una caja de variables, podemos hacer comparaciones</p>
+            <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int arr[4]={1,2,5,4};
+    if(arr[0]&lt;arr[2]){
+        cout &lt;&lt; "elemento 0 es menor que elemento 2" &lt;&lt; endl;
+    }
+}
+            </code></pre>
+            <p>Podemos también hacer algo así:</p>
+            <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int arr[4]={1,2,5,4};
+    for(int i=0;i&lt;4;i++){
+        <span style="color: #41913c;">//checar si es par o no es par</span>
+        if(arr[i]%2==0){
+            cout &lt;&lt; "elemento " &lt;&lt; i &lt;&lt; " es par" &lt;&lt; endl;
+        }else{
+            cout &lt;&lt; "elemento " &lt;&lt; i &lt;&lt; " no es par" &lt;&lt; endl;
+        }
+    }
+}
+            </code></pre>
+            <p>También podemos reasignar elementos del arreglo</p>
+            <hr>
+                <h3>problemas</h3>
+                <p>
+                    La neta no estoy seguro de que decir... toma tus problemas y ya jeje.<br>
+                    En caso de que tengas dudas revisa las páginas encontradas en: <br>
+                    <a href="../recursos/paginas-programacion.html">recursos</a>
+                </p>
+                <p>
+                   No vayas a usar ninguna inteligencia artifical, copiar, etc etc. <br>
+                   Si haces eso ¿cuál es el chiste carnal? 
+                </p>
+                <ul>
+                    <li><a href="https://omegaup.com/arena/problem/Reverso">PROBLEMA 1</a></li>
+                </ul>
             </main>
+            
         </div>
     </body>
     </html>

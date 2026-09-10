@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
     <html>
     <head>
@@ -62,8 +61,121 @@
                 </h4>        
             </div>  
             <main>
-                <h1>WIP</h1>
+                <h1><strong>lección 10</strong></h1>
+                <h2><strong>arreglos dinámicos</strong></h2>
+                <p>
+                    Los arreglos dinámicos son arreglos pero dinámicos... jeje.
+                    <br>
+                    Como podrás recordar, un arreglo normal tiene un tamaño fijo. En el caso del arreglo dinámico se cuenta con un tamaño variable o dinámico. Es posible
+                    seguir insertando elementos aunque no quepan dentro de dicho "tamaño".
+                </p>
+                <p>
+                    Para poder usar arreglos necesitamos incluir otra librería, es decir, agregar #include y el nombre de la librería (vectores) entre comparadores.
+                    Esto se terminaría viendo algo así: 
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main(){
+    <span style="color:#41913c">//de esta manera declaramos un vector</span>
+    vector&lt;int&gt; v;
+}
+                </code></pre>
+                <p>
+                    Como podrás haber inferido, para declarar un vector necesitamos colocar "vector" seguido de un tipo de dato entre comparadores y un nombre.
+                    Solo podemos tener un tipo de dato en el vector.
+                </p>
+                <p>
+                    Tambén podemos crear un vector con un tamaño inicial
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main(){
+    vector&lt;int&gt; v(3);
+}
+                </code></pre>
+                <p>
+                    También podemos poner valores dentro del vector desde un inicio.
+                </p>
+<pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main(){
+    vector&lt;int&gt; v={1,2,3};
+}
+                </code></pre>
+                <p>
+                    Para meter valores a un vector, en caso de que no hayamos declarado un tamaño inicial o que ya existan valores dentro del vector, necesitamos
+                    usar la función "push_back()".
+                </p>
+<pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main(){
+    vector&lt;int&gt; v;
+    int n;
+    cin >> n;
+    v.push_back(n);
+}
+                </code></pre>
+                <p>
+                    En caso de tener un tamaño inicialmente definido o ya contar con elementos dentro del vector podríamos hacerlo de la siguiente manera.
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main(){
+    vector&lt;int&gt; v(5);
+    for(int i=0;i&lt;5;i++){
+        cin &gt;&gt; v[i];
+    }
+}
+                </code></pre>
+                <p>
+                    Así como es posible crear arreglos de arreglos, podemos crear vectores de vectores.
+                </p>
+                <pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main(){
+    vector&lt;vector&lt;int&gt;&gt; v(5, vector&lt;int&gt;);
+    for(int i=0;i&lt;n;i++){
+        for(int j=0;j&lt;n; j++){
+            int n;
+            cin &gt;&gt; n;
+            v[i].push_back(n);
+        }
+    }
+}
+                </code></pre>
+            <p>
+                Aquí una cosa que probablemente no sabías... EL STRING ES UN ARREGLO DINÁMICO!!!!!!!! <br>
+                Probablemente no te emociones tanto como yo dado que aprendas esto, notando claro, que te emociones siquiera. <br>
+                El vector es un arreglo dinámico de caracteres.
+            </p>
+            <hr>
+                <h3>problemas</h3>
+                <p>
+                    La neta no estoy seguro de que decir... toma tus problemas y ya jeje.<br>
+                    En caso de que tengas dudas revisa las páginas encontradas en: <br>
+                    <a href="../recursos/paginas-programacion.html">recursos</a>
+                </p>
+                <p>
+                   No vayas a usar ninguna inteligencia artifical, copiar, etc etc. <br>
+                   Si haces eso ¿cuál es el chiste carnal? 
+                </p>
+                <ul>
+                    <li><a href="https://omegaup.com/arena/problem /Ordenando-las-letras-de-la-linea">PROBLEMA 1</a></li>
+                </ul>
             </main>
+
         </div>
     </body>
     </html>
