@@ -5,7 +5,6 @@ html, body{
     width: 100%;
     max-width: 100%;
     margin: 0;
-<<<<<<< HEAD
     padding: 0;
     overflow-x: hidden;
 }
@@ -17,8 +16,6 @@ body {
 img {
     max-width: 100%;
     height: auto;
-=======
->>>>>>> 39c089472b59211bf3c1fa7f29808ea201b77f6c
 }
 .layout{
     display: flex;
@@ -102,7 +99,6 @@ main {
     max-width: 100%;
     padding: 20px;
     box-sizing: border-box;
-<<<<<<< HEAD
     margin-left: 160px;
 }
 
@@ -120,10 +116,8 @@ main h6 {
 
 main h2{
     font-size: clamp(20px, 3vw, 30px);
-=======
     min-width: 0;
     margin-left: 160px;
->>>>>>> 39c089472b59211bf3c1fa7f29808ea201b77f6c
 }
 main p{
     font-size: clamp(14px, 1.5vw, 18px);
