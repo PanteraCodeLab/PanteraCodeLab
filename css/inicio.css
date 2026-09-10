@@ -1,31 +1,40 @@
+/* global */
+
 * {
     box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     width: 100%;
     max-width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
+
 body {
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
-
-img {
+img,
+video,
+iframe {
     max-width: 100%;
-    height: auto;
 }
-.layout{
+
+.layout {
     display: flex;
     align-items: stretch;
     min-height: 100vh;
+    max-width: 100%;
 }
 
-/*Navigation Menu*/
 
-#left-nav{
+/* nav */
+
+#left-nav {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -40,22 +49,27 @@ img {
     overflow-y: auto;
     z-index: 100;
 }
-#left-nav h4{
+
+#left-nav h4 {
     margin: 0;
     padding: 15px 5px;
 }
-#left-nav ul{
+
+#left-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
 }
-/*sub navigation menu*/
 
-.subnav{
+
+/* subnav */
+
+.subnav {
     width: 100%;
 }
-.subnavbtn{
+
+.subnavbtn {
     width: 100%;
     padding: 14px 10px;
     background-color: white;
@@ -66,99 +80,118 @@ img {
     cursor: pointer;
     text-align: left;
     box-sizing: border-box;
+    overflow-wrap: anywhere;
 }
-.subnavbtn:hover{
-	    background-color: #5555;
+
+.subnavbtn:hover {
+    background-color: #5555;
 }
-.subnav > a{
+
+.subnav > a {
     display: block;
     text-decoration: none;
 }
-.subnav-content{
+
+.subnav-content {
     display: none;
     width: 100%;
     background-color: white;
 }
-.subnav-content.show{
+
+.subnav-content.show {
     display: block;
 }
-.subnav-content a{
+
+.subnav-content a {
     display: block;
     padding: 10px 15px;
     color: black;
     font-size: 13px;
     text-decoration: none;
     box-sizing: border-box;
+    overflow-wrap: anywhere;
 }
-.subnav-content a:hover{
+
+.subnav-content a:hover {
     background-color: #5555;
 }
+
+
+/* main */
+
 main {
     flex: 1;
     min-width: 0;
     max-width: 100%;
     padding: 20px;
+    margin-left: 160px;
     box-sizing: border-box;
-    margin-left: 160px;
-}
-
-main p,
-main h1,
-main h2,
-main h3,
-main h4,
-main h5,
-main h6 {
-    max-width: 100%;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
-
-main h2{
-    font-size: clamp(20px, 3vw, 30px);
-    min-width: 0;
-    margin-left: 160px;
-}
-main p{
-    font-size: clamp(14px, 1.5vw, 18px);
-    line-height: 1.6;
-}
-
-p, a, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: anywhere;
 }
+
+main p {
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+main h1 {
+    font-size: clamp(24px, 4vw, 36px);
+    overflow-wrap: anywhere;
+}
+
+main h2 {
+    font-size: clamp(20px, 3vw, 30px);
+    overflow-wrap: anywhere;
+}
+
+main h3 {
+    font-size: clamp(18px, 2.5vw, 24px);
+    overflow-wrap: anywhere;
+}
+
+
+/*blocks of le code */
 
 pre {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-
+    margin: 1em 0;
+    padding: 12px;
     overflow-x: auto;
     overflow-y: hidden;
-
     white-space: pre;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #f5f5f5;
+    border-radius: 6px;
 }
 
 
-/*tablet*/
+/* tablet */
 
-@media screen and (max-width: 900px){
-    #left-nav{
+@media screen and (max-width: 900px) {
+
+    #left-nav {
         width: 180px;
         min-width: 180px;
     }
-    main{
+
+    main {
         margin-left: 180px;
     }
 }
-/*phone*/
 
-@media screen and (max-width: 600px){
-    .layout{
+
+/* PHONE */
+
+@media screen and (max-width: 600px) {
+
+    .layout {
         flex-direction: column;
     }
-    #left-nav{
+
+    #left-nav {
         position: static;
         width: 100%;
         min-width: 0;
@@ -167,63 +200,67 @@ pre {
         border-right: none;
         border-bottom: 1px solid black;
     }
-    #left-nav h4{
+
+    #left-nav h4 {
         padding: 10px;
     }
-    #left-nav ul{
+
+    #left-nav ul {
         display: flex;
         flex-wrap: wrap;
     }
-    .subnav{
+
+    .subnav {
         width: 50%;
     }
-    .subnavbtn{
+
+    .subnavbtn {
         text-align: center;
         font-size: 14px;
         padding: 12px 5px;
     }
-    .subnav-content{
+
+    .subnav-content {
         position: static;
+        width: 100%;
     }
-    .subnav-content a{
+
+    .subnav-content a {
         text-align: center;
         padding: 10px 5px;
     }
-    main{
+
+    main {
         width: 100%;
+        max-width: 100%;
         margin-left: 0;
         padding: 15px;
     }
-    main h2{
-        font-size: 22px;
+
+    main p {
+        font-size: clamp(14px, 3.5vw, 17px);
     }
-    main p{
-        font-size: 15px;
-    }
+
     pre {
         font-size: 12px;
+        padding: 10px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
-/*smol phone*/
+/* smol phone */
+@media screen and (max-width: 400px) {
 
-@media screen and (max-width: 400px){
-    .subnav{
+    .subnav {
         width: 100%;
     }
-    .subnavbtn{
+
+    .subnavbtn {
         font-size: 15px;
     }
-    main{
+
+    main {
         padding: 12px;
-    }
-    main h2{
-        font-size: 20px;
-    }
-    main p{
-        font-size: 14px;
-    }
-    pre {
-        font-size: 12px;
     }
 }
 
