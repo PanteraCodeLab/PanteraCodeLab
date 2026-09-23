@@ -62,8 +62,8 @@
                 </h4>        
             </div> 
             <main>
-                <h1><strong>lección 4</strong></h1>
-                <h2><strong>entrada y salida</strong></h2>
+                <h1><strong>Lección 4</strong></h1>
+                <h2><strong>Entrada y salida</strong></h2>
                 <p>
                     La interacción entre el usuario y la máquina es fundamental para cualquier aplicación.
                     En c++, esta se logra a través de comandos definidos en la librería &lt;iostream&gt;: cin y cout.
@@ -75,7 +75,13 @@
                     escribirse el nombre de la función, seguido de dos comparadores, una “boquilla”.                
                 </p>
                 
-                <img src="../../imgs/lec4/hola_mundo.png">
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    cout &lt;&lt; "Hola Mundo!" &lt;&lt; '\n';
+}
+                </code></pre>
                 <p>
                     Como podrás notar, hacemos uso de las comillas dobles para envolver “hola mundo”, esto
                     es debido a que “hola mundo” es un string. En caso de que escribieras hola mundo sin
@@ -104,7 +110,14 @@
                     En caso de que quisiéramos crear un mensaje más largo, ej: decirle hola a alguien,
                     podríamos hacer lo siguiente:
                 </p>
-                <img src="../../imgs/lec4/hola_chinos.png">
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    string nombre = "chinos";
+    cout &lt;&lt; "hola" &lt;&lt; nombre &lt;&lt; '\n';
+}
+                </code></pre>
                 <p>
                     Como puedes notar, usamos dos de esas “boquillas” para separar una
                     variable y “hola”.
@@ -123,9 +136,23 @@
                     Si quisiéramos agregar este espacio, nuestro código se vería algo
                     así:
                 </p>
-                <img src="../../imgs/lec4/hola_chinos_espacio1.png">
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    string nombre = "chinos";
+    cout &lt;&lt; "hola" &lt;&lt; " " &lt;&lt; nombre &lt;&lt; '\n';
+}
+                </code></pre>
                 <p> O algo así: </p>
-                <img src="../../imgs/lec4/hola_chinos_espacio2.png">
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    string nombre = "chinos";
+    cout &lt;&lt; "hola " &lt;&lt; nombre &lt;&lt; '\n';
+}
+                </code></pre>
                 <p>
                     En el primer ejemplo sólo presionamos la barra espaciadora después
                     de hola para agregar el caracter de espacio, en el segundo ejemplo
@@ -141,7 +168,14 @@
                     Ahora, con respecto a entrada de datos en c++ hacemos uso de la
                     función “cin” y volteamos las “boquillas”.
                 </p>
-                <img src="../../imgs/lec4/pedir_nombre.png">
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    string nombre;
+    cin &gt;&gt; nombre;
+}
+                </code></pre>
                 <p>
                     Como podrás notar, “nombre” no tiene ningún valor asignado pues se
                     lo pediremos al usuario a través de la función “cin”. Sin embargo,
@@ -160,7 +194,15 @@
                 <p> 
                     Se metió el valor “sebas”, sin embargo no obtenemos ninguna salida debido a que no hemos indicado que debe haber una salida.
                 </p>
-                <img src="../../imgs/lec4/out6.png">
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){ 
+    string nombre;
+    cin &gt;&gt; nombre;
+    cout &lt;&lt; "hola " &lt;&lt; nombre &lt;&lt; '\n';
+}
+                </code></pre>
                 <p> 
                     Editando el código de la siguiente manera, obtendremos una salida acorde al valor que hayamos metido a esta variable.
                 </p>

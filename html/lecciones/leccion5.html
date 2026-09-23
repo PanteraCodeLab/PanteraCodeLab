@@ -62,8 +62,8 @@
                 </h4>        
             </div> 
             <main>
-                <h1><strong>lección 5</strong></h1>
-                <h2><strong>operaciones aritméticas</strong></h2>
+                <h1><strong>Lección 5</strong></h1>
+                <h2><strong>Operaciones aritméticas</strong></h2>
                 <p>
                     Para hacer sumas, restas, multiplicaciones… etcétera en c++ sólo requerimos del uso de
                     los operadores necesarios. Algunos de estos cambian en c++ notando a lo
@@ -81,7 +81,14 @@
                     Aquí un ejemplo de cómo podríamos lograr la suma de dos números cuyos valores ya han
                     sido declarados en variables
                 </p>
-                <img src="../../imgs/lec5/pls2.png">
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int a=2, b=2;
+    cout &lt;&lt; a+b &lt;&lt; '\n';
+}
+                </code></pre>
                 <p>
                     En este caso, la salida del código sería, evidentemente:
                 </p>
@@ -89,7 +96,15 @@
                 <p>La entrada y salida puede lograrse al tratar con números, evidentemente.</p>
                 <p>Digamos que queremos hacer la suma de dos números a,b que le pedimos al usuario.</p>
                 <p>Este código se vería algo así:</p>
-                <img src="../../imgs/lec5/plsr.png">
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int a,b;
+    cin &gt;&gt; a &gt;&gt; b;
+    cout &lt;&lt; a+b &lt;&lt; '\n';
+}
+                </code></pre>
                 <p>
                     No podemos meter datos que no sean números a esta variable, pues no
                     es el tipo de dato correcto, en caso de hacer algo así notaremos el
@@ -104,11 +119,27 @@
                 <p>
                     Por ejemplo, calculemos el área de un cuadrado.
                 </p>
-                <img src="../../imgs/lec5/sqr.png">
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int l;
+    cin &gt;&gt; l;
+    cout &lt;&lt; l*l &lt;&lt; '\n';
+}
+                </code></pre>
                 <p>
                     O, el área de un triángulo
                 </p>
-                <img src="../../imgs/lec5/tri.png">
+                <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int b, h;
+    cin &gt;&gt; b &gt;&gt; h;
+    cout &lt;&lt; (b*h)/2 &lt;&lt; '\n';
+}
+                </code></pre>
                 <hr>
                 <h3>problemas</h3>
                 <p>
