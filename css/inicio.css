@@ -151,7 +151,15 @@ main h3 {
     font-size: clamp(18px, 2.5vw, 24px);
     overflow-wrap: anywhere;
 }
-
+/*align images*/
+.aligned{
+    display: flex; 
+    margin: auto;
+    align-items: center;
+}
+.aligned span{
+    padding: 10px;
+}
 
 /*blocks of le code */
 
