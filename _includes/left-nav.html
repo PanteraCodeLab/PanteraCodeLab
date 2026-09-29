@@ -1,0 +1,71 @@
+<nav id="left-nav">
+    <a href="{{ '/' | relative_url }}">
+        <img
+            src="{{ '/fav.ico' | relative_url }}"
+            alt="Logo"
+        >
+    </a>
+    <h4 class="site-title">PanteraCodeLab</h4>
+    <div class="left-menu-text">
+        Manual de Programación CB28
+    </div>
+    <ul>
+        <li class="subnav">
+            <a class="subnavbtn" href="{{ '/' | relative_url }}" >
+                <strong>Inicio</strong>
+            </a>
+
+        </li>
+
+        <li class="subnav">
+            <button class="subnavbtn" onclick="toggleDropdown(this)">
+                <strong>Recursos</strong>
+                <span>⌄</span>
+            </button>
+            <div class="subnav-content">
+
+                {% assign ordered_resources = site.resources | sort: "order" %}
+                {% for resource in ordered_resources %}
+                    <a href="{{ resource.url | relative_url }}">
+                        {{ resource.title }}
+                    </a>
+                {% endfor %}
+
+            </div>
+
+        </li>
+        <li class="subnav">
+
+            <button class="subnavbtn" onclick="toggleDropdown(this)">
+                <strong>Contenido</strong>
+                <span>⌄</span>
+            </button>
+            <div class="subnav-content">
+                {% assign ordered_lessons = site.lessons | sort: "order" %}
+                {% for lesson in ordered_lessons %}
+                    <a href="{{ lesson.url | relative_url }}">
+                        {{ lesson.title }}
+                    </a>
+
+                {% endfor %}
+
+            </div>
+
+        </li>
+
+
+
+        <li class="subnav">
+
+            <a
+                class="subnavbtn"
+                href="{{ '/acercade/' | relative_url }}"
+            >
+                <strong>Acerca de</strong>
+            </a>
+
+        </li>
+
+    </ul>
+
+</nav>

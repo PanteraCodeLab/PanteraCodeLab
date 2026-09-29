@@ -1,72 +1,93 @@
-/* global */
-
+/*global*/
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 html,
 body {
     width: 100%;
-    max-width: 100%;
     min-height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 body {
-    overflow-wrap: anywhere;
-}
-
-img,
-video,
-iframe {
-    max-width: 100%;
+    background: #f7f8fc;
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
 }
 
 .layout {
-    display: flex;
-    align-items: stretch;
     min-height: 100vh;
-    max-width: 100%;
-}
-p{
-    text-align: justify;
-    margin-right: 5%;
 }
 
-/* nav */
+/*left nav */
 
 #left-nav {
-    display: flex;
-    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
-    width: 160px;
-    min-width: 160px;
+    width: 300px;
     height: 100vh;
-    background-color: #fff;
-    border-right: 1px solid black;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
     overflow-y: auto;
-    z-index: 100;
+    z-index: 1000;
+
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.04);
 }
 
-#left-nav h4 {
-    margin: 0;
-    padding: 15px 5px;
+/* logo */
+
+#left-nav > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px 20px 10px;
 }
+
+#left-nav > a img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+
+/* titulo sitio */
+
+.site-title {
+    margin: 0;
+    padding: 0 25px 8px;
+    color: #111827;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Description */
+
+.left-menu-text {
+    padding: 10px 25px 20px;
+
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* menu */
 
 #left-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%;
 }
 
-
-/* subnav */
+/* nav items and subnav and stuff haha hehe*/
 
 .subnav {
     width: 100%;
@@ -74,21 +95,36 @@ p{
 
 .subnavbtn {
     width: 100%;
-    padding: 14px 10px;
-    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 25px;
     border: none;
-    color: black;
+    background: transparent;
+    color: #374151;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
     text-align: left;
-    box-sizing: border-box;
-    overflow-wrap: anywhere;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        padding-left 0.15s ease;
 }
 
 .subnavbtn:hover {
-    background-color: #5555;
+    background: #f1f5f9;
+    color: #5277a8;
+    padding-left: 30px;
 }
+
+.subnavbtn strong {
+    font-weight: 700;
+}
+
+/* links in subnav */
 
 .subnav > a {
     display: block;
@@ -98,7 +134,8 @@ p{
 .subnav-content {
     display: none;
     width: 100%;
-    background-color: white;
+    background: #f8faff;
+    border-left: 3px solid #d2e0f2;
 }
 
 .subnav-content.show {
@@ -107,162 +144,352 @@ p{
 
 .subnav-content a {
     display: block;
-    padding: 10px 15px;
-    color: black;
-    font-size: 13px;
+
+    padding: 10px 20px 10px 35px;
+
+    color: #4b5563;
+    font-size: 15px;
+    line-height: 1.4;
+
     text-decoration: none;
-    box-sizing: border-box;
-    overflow-wrap: anywhere;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease;
 }
 
 .subnav-content a:hover {
-    background-color: #5555;
+    background: #edf4fc;
+    color: #5277a8;
 }
 
+/* right-nav */
+/*todo: adivinar q quiere q pongamos cano aquí*/
 
+#right-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 170px;
+    height: 100vh;
+    background: #ffffff;
+    border-left: 1px solid #e5e7eb;
+
+    z-index: 900;
+}
 /* main */
-
 main {
-    flex: 1;
     min-width: 0;
-    max-width: 100%;
-    padding: 20px;
-    margin-left: 160px;
-    box-sizing: border-box;
-    overflow-wrap: anywhere;
+    margin-left: 300px;
+    margin-right: 170px;
+    padding: 50px clamp(25px, 5vw, 80px);
+    max-width: 1200px;
+    background: #f7f8fc;
 }
-
-main p {
-    line-height: 1.6;
-    max-width: 100%;
+/*  wrapper */
+main > * {
+    max-width: 850px;
+}
+/* headings */
+main h1,
+main h2,
+main h3 {
+    color: #000000;
+    line-height: 1.25;
 }
 
 main h1 {
-    font-size: clamp(24px, 4vw, 36px);
-    overflow-wrap: anywhere;
+    font-size: clamp(30px, 4vw, 46px);
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
 main h2 {
-    font-size: clamp(20px, 3vw, 30px);
-    overflow-wrap: anywhere;
+    font-size: clamp(25px, 3vw, 34px);
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 main h3 {
-    font-size: clamp(18px, 2.5vw, 24px);
-    overflow-wrap: anywhere;
-}
-/*align images*/
-.aligned{
-    display: flex; 
-    margin: auto;
-    align-items: center;
-}
-.aligned span{
-    padding: 10px;
+    font-size: clamp(21px, 2.5vw, 27px);
 }
 
-/*blocks of le code */
+/* parrafos */
+
+main p {
+    margin: 0 0 20px;
+    color: #374151;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* links dentro del contenido */
+
+main a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/*imágenes */
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* momazos del inicio */
+
+.aligned {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    margin: 30px 0;
+}
+
+.aligned img {
+    width: 200px;
+    max-width: 100%;
+    border-radius: 12px;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.aligned img:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* códigos */
 
 pre {
-    width: 95%;
-    max-width: 95%;
-    box-sizing: border-box;
-    margin: 1em 0;
-    padding: 12px;
+    width: 100%;
+    max-width: 850px;
+    margin: 25px 0;
+    padding: 18px;
     overflow-x: auto;
-    overflow-y: hidden;
-    white-space: pre;
-    font-size: 14px;
-    line-height: 1.5;
-    background: #f5f5f5;
+    background: #1f2937;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
 }
 
+pre code,
+pre code span {
+    color: #FFFFFF;
+    font-family: inherit;
+}
+
+pre code .c,
+pre code .c1,
+pre code .cm,
+pre code .cs {
+    color: #86efac;
+}
+
+code {
+    font-family: "Courier New", monospace;
+}
+
+:not(pre) > code {
+    padding: 2px 6px;
+
+    background: #e5e7eb;
+    color: #dc2626;
+
+    border-radius: 5px;
+}
 
 /* tablet */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
 
     #left-nav {
-        width: 180px;
-        min-width: 180px;
+        width: 240px;
+    }
+
+    #right-nav {
+        display: none;
     }
 
     main {
-        margin-left: 180px;
+        margin-left: 240px;
+        margin-right: 0;
+
+        padding: 40px clamp(20px, 4vw, 50px);
     }
 }
 
+/* smol tablet*/
 
-/* PHONE */
-
-@media screen and (max-width: 600px) {
-
-    .layout {
-        flex-direction: column;
-    }
+@media screen and (max-width: 800px) {
 
     #left-nav {
-        position: static;
-        width: 100%;
-        min-width: 0;
-        min-height: auto;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid black;
-    }
-
-    #left-nav h4 {
-        padding: 10px;
-    }
-
-    #left-nav ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .subnav {
-        width: 50%;
-    }
-
-    .subnavbtn {
-        text-align: center;
-        font-size: 14px;
-        padding: 12px 5px;
-    }
-
-    .subnav-content {
-        position: static;
-        width: 100%;
-    }
-
-    .subnav-content a {
-        text-align: center;
-        padding: 10px 5px;
+        width: 220px;
     }
 
     main {
-        width: 100%;
-        max-width: 100%;
-        margin-left: 0;
-        padding: 15px;
+        margin-left: 220px;
     }
 
     main p {
-        font-size: clamp(14px, 3.5vw, 17px);
-    }
-
-    pre {
-        font-size: 12px;
-        padding: 10px;
-        margin-left: 0;
-        margin-right: 0;
+        font-size: 17px;
     }
 }
-/* smol phone */
-@media screen and (max-width: 400px) {
+
+/* phone */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        background: #ffffff;
+    }
+
+
+    #left-nav {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+
+        overflow: visible;
+    }
+
+
+    #left-nav > a {
+        padding: 15px 15px 5px;
+    }
+
+    #left-nav > a img {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    .left-menu-text {
+        padding: 5px 20px 15px;
+
+        text-align: center;
+
+        font-size: 14px;
+    }
+
+
+    #left-nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        width: 100%;
+    }
 
     .subnav {
         width: 100%;
+    }
+
+    .subnavbtn {
+        justify-content: center;
+
+        padding: 12px 8px;
+
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .subnavbtn:hover {
+        padding-left: 8px;
+    }
+
+
+    .subnav-content {
+        border-left: none;
+        border-top: 2px solid #d2e0f2;
+    }
+
+    .subnav-content a {
+        padding: 10px;
+
+        font-size: 14px;
+        text-align: center;
+    }
+
+
+    main {
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+
+        padding: 30px 18px;
+    }
+
+    main > * {
+        max-width: none;
+    }
+
+    main h1 {
+        font-size: 30px;
+    }
+
+    main h2 {
+        font-size: 26px;
+    }
+
+    main h3 {
+        font-size: 21px;
+    }
+
+    main p {
+        font-size: 16px;
+        line-height: 1.7;
+
+        text-align: left;
+    }
+
+
+    .aligned {
+        gap: 15px;
+    }
+
+    .aligned img {
+        width: calc(50% - 8px);
+    }
+
+
+    pre {
+        width: 100%;
+
+        padding: 14px;
+
+        font-size: 12px;
+
+        border-radius: 8px;
+    }
+}
+
+/* smol phon */
+
+@media screen and (max-width: 400px) {
+
+    #left-nav ul {
+        grid-template-columns: 1fr;
     }
 
     .subnavbtn {
@@ -270,7 +497,19 @@ pre {
     }
 
     main {
-        padding: 12px;
+        padding: 25px 15px;
+    }
+
+    main p {
+        font-size: 15px;
+    }
+
+    .aligned {
+        flex-direction: column;
+    }
+
+    .aligned img {
+        width: 100%;
+        max-width: 300px;
     }
 }
-

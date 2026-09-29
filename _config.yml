@@ -1,0 +1,10 @@
+baseurl: "/PanteraCodeLab"
+
+collections:
+  lessons:
+    output: true
+  resources:
+    output: true
+exclude:
+  - index.html
+  - html
