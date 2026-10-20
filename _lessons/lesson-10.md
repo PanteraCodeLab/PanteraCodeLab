@@ -98,3 +98,7 @@ Aquí una cosa que probablemente no sabías... ¡el string es un arreglo dinámi
 En caso de dudas revisa las páginas encontradas en [recursos]({{ '/html/recursos/paginas-programacion.html' | relative_url }}).
 
 - [Problema 1](https://omegaup.com/arena/problem/Ordenando-las-letras-de-la-linea)
+- [Problema 2](https://omegaup.com/arena/problem/Imprimiendo-enteros-por-paridad/)
+- [Problema 3](https://omegaup.com/arena/problem/Cuenta-Cadenas/)
+- [Problema 4](https://omegaup.com/arena/problem/El-agua-y-el-aceite/)
+- [Problema 5](https://omegaup.com/arena/problem/pb-Frecuencias/)

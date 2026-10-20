@@ -118,3 +118,92 @@ int main(){
 ```
 
 ![Salida de función con referencia]({{ '/imgs/lec12/otss.png' | relative_url }})
+
+### Ejercicio 1: Función queue
+La función principal declara un char, y pide que des un carácter. Si el carácter escrito es ‘q’, se llamará a una función queque() que escriba que quieres un queque Si es un carácter diferente, se llama a una función noQueque() que escriba que no quieres queque.
+
+#### Ejemplo 1
+
+#### Entrada
+<pre>
+p
+</pre>
+
+#### Salida
+<pre>
+No quiero queue
+</pre>
+
+#### Ejemplo 2
+
+#### Entrada
+<pre>
+u
+</pre>
+
+#### Salida
+<pre>
+No quiero queue
+</pre>
+
+#### Ejemplo 3
+
+#### Entrada
+<pre>
+q
+</pre>
+
+#### Salida
+<pre>
+Quiero un queue
+</pre>
+
+<button class="problem0" onclick="mostrarSolucionTre()" style="border: none; background-color: #f7f8fc; font-size: 16px; cursor: pointer; padding: 8px 12px; border-radius: 5px;">
+  <strong>Solución</strong> ▼
+</button>
+<div id="solutiontre" style="display: none; margin-top: 10px; padding: 12px; background-color: #f7f8fc; border-radius: 5px;">
+
+  <strong>
+  Explicación 
+  </strong>
+  <p>
+  Define las funciones queque() y noQueque().
+  </p>
+  <p>
+  Tras definir las funciones queque() y noQueue() en la función main()
+  lo que hacemos es declarar un caracter, lo pedimos y metemos un condicional que hace una 
+  llamada a alguna de las dos funciones acorde a lo que sea checado por la misma.
+  </p>
+<pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+void queque(){
+    cout &lt;&lt; "Quiero un queque" &lt;&lt;'\n';
+}
+
+void noQueque(){
+    cout &lt;&lt; “No quiero queque” &lt;&lt; ‘\n’;
+}
+
+int main(){
+    char opcion; cin &gt;&gt; opcion;
+    if(opcion == 'q'){
+        queque();
+    }
+    else{
+        noQueque();
+    }
+    return 0;
+}
+</code></pre>
+
+</div>
+
+<script>
+function mostrarSolucionTre() {
+  const solution = document.getElementById("solutiontre");
+  solution.style.display =
+    solution.style.display === "none" ? "block" : "none";
+}
+</script>

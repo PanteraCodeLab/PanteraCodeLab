@@ -119,7 +119,44 @@ else if(cond2){}
 else if(cond3){}
 else {}
 ```
+### Divisibilidad
+A través de los condicionales es posible checar si un número x es divisible entre algún número n haciendo uso del operador `%` módulo.
 
+```cpp
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    cin >> n;
+    if(n%2==0){
+        cout << "Es par" << '\n';
+    }else{
+        cout << "Es impar" << '\n';
+    }
+}
+```
+El anterior código pide un número para entonces usar un condicional que a la vez realiza la operación módulo sobre n.
+`if(n%2==0)` es como decir: si el residuo de n dividido entre dos es 0 entonces... 
+Luego juntamos un else; en caso de que el residuo no sea cero, el número será impar. El número por el cual hacemos módulo no tiene por qué 
+ser el número 2, puede ser cualquier otro número.
+```cpp
+#include <iostream>
+using namespace std;
+int main(){ 
+    int n, div;
+    cin >> n >> div;
+    if(n%div==0){
+        cout << n << " es divisible entre " << div << '\n';
+    }else{
+        cout << n << " no es divisible entre " << div << '\n';
+    }
+}
+```
+Y también es posible checar para cualquier otro residuo.
+
+Si quisieras aprender más sobre el módulo, checa este artículo sobre la aritmética modular:
+
+[Artículo](https://es.wikipedia.org/wiki/Aritm%C3%A9tica_modular)
 ### Switches
 
 Un `switch` es una estructura condicional que evalúa una variable entre un conjunto de posibles valores, similar a una cadena de `else if`, con la ventaja de ser fácil de escribir.

@@ -81,6 +81,7 @@ En caso de dudas revisa las páginas encontradas en [recursos]({{ '/html/recurso
 - [Problema 2](https://omegaup.com/arena/problem/0-Resta-basica/)
 - [Problema 3](https://www.omegaup.com/arena/problem/Area_Triangulo/)
 - [Problema 4](https://www.omegaup.com/arena/problem/Calculos-mentales-competitivos/)
-- [Problema 5 (extra)](https://omegaup.com/arena/problem/Repartiendo-cachorros/)
+- [RETO)](https://omegaup.com/arena/problem/Repartiendo-cachorros/)
 
 **Nota:** Para resolver problemas relacionados con residuos de división, lee [esta página sobre el operador módulo](https://www.geeksforgeeks.org/cpp/modulo-operator-in-c-cpp-with-examples/).
+

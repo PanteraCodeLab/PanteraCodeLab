@@ -149,6 +149,9 @@ int main(){
 En caso de dudas revisa las páginas encontradas en [recursos]({{ '/html/recursos/paginas-programacion.html' | relative_url }}).
 
 - [Problema 1](https://omegaup.com/arena/problem/ciclo_mientras_no_cero)
-- [Problema 2](https://omegaup.com/arena/problem/Mensaje-de-Amor)
-- [Problema 3](https://omegaup.com/arena/problem/El-problema-3n1)
-- [Problema 4](https://omegaup.com/arena/problem/La-secuencia-infinita)
+- [Problema 2](https://omegaup.com/arena/problem/El-problema-3n1)
+- [Problema 3](https://omegaup.com/arena/problem/La-panza-lanzadora/)
+- [Problema 4](https://omegaup.com/arena/problem/Promedio-Calificaciones-/)
+- [Problema 5](https://omegaup.com/arena/problem/Verificando-Boletos/)
+- [Problema 6](https://omegaup.com/arena/problem/Forzando-la-caja-fuerte/)
+

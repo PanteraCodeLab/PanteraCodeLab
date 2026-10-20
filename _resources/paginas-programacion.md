@@ -10,6 +10,7 @@ permalink: /recursos/paginas-programacion/
 Aquí compartimos una serie de páginas que pueden ser útiles para consultar sintaxis de programación (la manera en la que se escribe el código), practicar y subir trabajos a plataformas de juez como OmegaUp.
 
 ## OmegaUp
+<img src="../imgs/recursos/omegaup.jpg/">
 
 OmegaUp es una plataforma que tiene como objetivo impulsar la programación competitiva y facilitar el entrenamiento de estudiantes de habla hispana.
 

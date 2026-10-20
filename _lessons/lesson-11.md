@@ -75,3 +75,220 @@ int main(){
     return 0;
 }
 ```
+### Ejercicio 1: Cambiar precios
+Tienes un programa de C++, con 4 variables globales (fuera de la función main) que representan el precio de 4 productos. Debes usar punteros que contengan la dirección de cada producto y pedir que pongas un nuevo precio. Al final debes mostrar en la consola los nuevos precios de cada producto.
+
+#### Ejemplo 1
+
+#### Entrada
+<pre>
+p
+</pre>
+
+#### Salida
+<pre>
+No quiero queue
+</pre>
+
+#### Ejemplo 2
+
+#### Entrada
+<pre>
+u
+</pre>
+
+#### Salida
+<pre>
+No quiero queue
+</pre>
+
+#### Ejemplo 3
+
+#### Entrada
+<pre>
+q
+</pre>
+#### Salida
+<pre>
+Quiero un queue
+</pre>
+
+```cpp
+//precios
+//variables globales
+float manzana = 10.99;
+float platano = 24.50;
+float naranja = 16.20;
+float aguacate = 5.40;
+
+int main(){
+    //cambiar el precio de cada uno, usando punteros
+    float* cambiar_precio = &manzana;
+    //tipo* nombre = &variable;
+
+    //SOLUCION AQUI
+
+    return 0;
+}
+```
+
+<button class="problem0" onclick="mostrarSolucionTre()" style="border: none; background-color: #f7f8fc; font-size: 16px; cursor: pointer; padding: 8px 12px; border-radius: 5px;">
+  <strong>Solución</strong> ▼
+</button>
+<div id="solutiontre" style="display: none; margin-top: 10px; padding: 12px; background-color: #f7f8fc; border-radius: 5px;">
+
+  <strong>
+  Explicación 
+  </strong>
+  <p>
+  Define las funciones queque() y noQueque().
+  </p>
+  <p>
+  Tienes un programa de C++, con 4 variables globales (fuera de la función main) que representan el precio de 4 productos. Debes usar punteros que contengan la dirección de cada producto y pedir que pongas un nuevo precio. Al final debes mostrar en la consola los nuevos precios de cada producto.  
+  </p>
+  <p>Código base</p>
+<pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+//precios
+//variables globales
+float manzana = 10.99;
+float platano = 24.50;
+float naranja = 16.20;
+float aguacate = 5.40;
+
+int main(){
+    //cambiar el precio de cada uno, usando punteros
+    float* cambiar_precio = &amp;manzana;
+    //tipo* nombre = &amp;variable;
+
+    //SOLUCION AQUI
+
+    return 0;
+}
+
+</code></pre>
+
+</div>
+
+<script>
+function mostrarSolucionTre() {
+  const solution = document.getElementById("solutiontre");
+  solution.style.display =
+    solution.style.display === "none" ? "block" : "none";
+}
+</script>
+### Ejercicio 2: Cambio de identidad
+Imagina que eres perseguido, y decides mejor llamar a Saúl, un abogado que puede borrar personas de los registros, cambiar identidades.
+
+Hay un programa en C++ que tiene variables globales con todo sobre tí, tu nombre, edad, altura y país de residencia.
+
+En la función principal usa un solo puntero que cambie cada variable con datos falsos, Al final muestra los datos de tu nueva identidad.
+
+Código base
+```cpp
+#include <iostream>
+using namespace std;
+
+//datos
+//variables globales
+string nombre = "Walter";
+int edad = 52;
+float altura = 1.79;
+string pais = "United States";
+
+int main(){
+    //cambiar el precio de cada uno, usando un puntero
+    void* desaparecer;
+    //tipo* nombre = &variable;
+
+    //SOLUCION AQUI
+
+    return 0;
+}
+```
+
+
+#### Ejemplo 1
+
+#### Entrada
+<pre>
+Jesse
+26
+1.80
+Alaska
+</pre>
+
+#### Salida
+<pre>
+nombre: Jesse
+edad:   26
+altura: 1.8
+pais:   Alaska
+</pre>
+
+
+
+<button class="problem2" onclick="mostrarSolucion()" style="border: none; background-color: #f7f8fc; font-size: 16px; cursor: pointer; padding: 8px 12px; border-radius: 5px;">
+  <strong>Solución</strong> ▼
+</button>
+<div id="solution" style="display: none; margin-top: 10px; padding: 12px; background-color: #f7f8fc; border-radius: 5px;">
+
+  <strong>
+  Explicación 
+  </strong>
+  <p>
+  Pedimos cuatro datos que inmediatamente transformamos a strings haciendo uso de static_cast. 
+  Después de esto, simplemente los sacamos.
+  </p>
+<pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+//datos
+//variables globales
+string nombre = "Walter White";
+int edad = 52;
+float altura = 1.79;
+string pais = "United States";
+
+int main(){
+    //cambiar el precio de cada uno, usando un puntero
+    void&#42; desaparecer = &amp;nombre;
+    //tipo&#42; nombre = &amp;variable;
+    cin >>&#42;(static_cast&lt;string&#42;&gt;(desaparecer));
+
+    desaparecer = &amp;edad;
+    cin >> &#42;(static_cast&lt;int&#42;&gt;(desaparecer));
+
+
+    desaparecer = &amp;altura;
+    cin >> &#42;(static_cast&lt;float&#42;&gt;(desaparecer));
+
+
+    desaparecer = &amp;pais;
+    cin >> &#42;(static_cast&lt;string&#42;&gt;(desaparecer));
+
+
+    cout << "nombre: " << nombre << '\n';
+    cout << "edad:   " << edad << '\n';
+    cout << "altura: " << altura << '\n';
+    cout << "pais:   " << pais << '\n';
+
+
+    return 0;
+}
+
+</code></pre>
+
+</div>
+
+<script>
+function mostrarSolucion() {
+  const solution = document.getElementById("solution");
+  solution.style.display =
+    solution.style.display === "none" ? "block" : "none";
+}
+</script>
+

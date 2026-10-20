@@ -163,3 +163,10 @@ También podemos reasignar elementos del arreglo.
 En caso de dudas revisa las páginas encontradas en [recursos]({{ '/html/recursos/paginas-programacion.html' | relative_url }}).
 
 - [Problema 1](https://omegaup.com/arena/problem/Reverso)
+- [Problema 2](https://omegaup.com/arena/problem/Can)
+- [Problema 3](https://omegaup.com/arena/problem/Palindromos)
+- [Problema 4](https://omegaup.com/arena/problem/Suma-Columnas/)
+- [Problema 5](https://omegaup.com/arena/problem/Ignorando-los-primeros-elementos/)
+- [Problema 6](https://omegaup.com/arena/problem/Encontrar-valor/)
+- [Problema 7](https://omegaup.com/arena/problem/Matriz-de-Adyacencia/)
+

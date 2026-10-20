@@ -47,3 +47,18 @@ int main(){
     cout << '\n';
 }
 ```
+
+### Problemas
+
+En caso de dudas revisa las páginas encontradas en [recursos]({{ '/html/recursos/paginas-programacion.html' | relative_url }}).
+
+- [Problema 1](https://www.omegaup.com/arena/problem/Escalera-de-asteriscos/)
+- [Problema 2](https://omegaup.com/arena/problem/Mensaje-de-Amor)
+- [Problema 3](https://omegaup.com/arena/problem/La-secuencia-infinita)
+- [Problema 4](https://www.omegaup.com/arena/problem/COMI-Tak-Tak-Tree/)
+- [Problema 5](https://www.omegaup.com/arena/problem/Suma-de-sumas/)
+- [Problema 6](https://www.omegaup.com/arena/problem/Matrices-Simples/)
+- [Problema 7](https://www.omegaup.com/arena/problem/Valles/)
+- [RETO](https://omegaup.com/arena/problem/Suma-de-rangos/)
+
+
