@@ -8,6 +8,10 @@ permalink: /recursos/editores-de-codigo/
 # Editores de código
 
 ## CodeBlocks
+<img src="{{ '/imgs/recursos/codeblocks.jpg' | relative_url }}"
+     alt="codeblocks"
+     height="200"
+     width="200">
 
 Los editores de código permiten... editar código. Existen muchos, pero en clase se usará CodeBlocks. Aquí encontrarás tutoriales para instalarlo. CodeBlocks es muy completo y fácil de usar, por eso fue seleccionado para el curso.
 
@@ -21,7 +25,11 @@ CodeBlocks es un IDE (Integrated Development Environment o Entorno de Desarrollo
 </video>
 
 ## Coding C++ (Android)
-
+<img src="{{ '/imgs/recursos/codingcpp.png' | relative_url }}"
+     alt="codingcpp"
+     height="200"
+     width="200">
+     
 Si no tienes acceso a una computadora, este editor permite ejecutar C++ en Android.
 
 [Coding C++](https://play.google.com/store/apps/details?id=com.kvassyu.coding2.cpp&hl=en-US)

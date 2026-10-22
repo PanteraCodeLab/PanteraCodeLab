@@ -146,7 +146,7 @@ int main(){
 
 ### Problemas
 
-En caso de dudas revisa las páginas encontradas en [recursos]({{ '/html/recursos/paginas-programacion.html' | relative_url }}).
+En caso de dudas revisa las páginas encontradas en [recursos]({{ '/recursos/paginas-programacion' | relative_url }}).
 
 - [Problema 1](https://omegaup.com/arena/problem/ciclo_mientras_no_cero)
 - [Problema 2](https://omegaup.com/arena/problem/El-problema-3n1)

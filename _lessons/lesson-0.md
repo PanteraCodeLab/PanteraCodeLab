@@ -139,7 +139,7 @@ NO
 
 <div id="solution" style="display: none; margin-top: 10px; padding: 12px; background-color: #f7f8fc; border-radius: 5px;">
 
-  <img src="../imgs/lec0/solucion0.png/">
+  <![Solucion0]({{ '/imgs/lec0/solucion0.png' | relative_url}})
   <strong>
   Explicación (Proceso del diagrama)
   </strong>
@@ -216,7 +216,7 @@ Dados 3 números, determina cuál es el mayor de ellos con condicionales.
 </button>
 <div id="solutiontwo" style="display: none; margin-top: 10px; padding: 12px; background-color: #f7f8fc; border-radius: 5px;">
 
-  <img src="../imgs/lec0/solucion1.png/">
+  ![Solucion1]({{ '/imgs/recursos/solucion1.png' | relative_url}})
   <strong>
   Explicación (Proceso del diagrama)
   </strong>
@@ -286,7 +286,7 @@ Cabe mencionar que n es un número entero positivo, de modo que no vas a sumar n
 </button>
 <div id="solutiontre" style="display: none; margin-top: 10px; padding: 12px; background-color: #f7f8fc; border-radius: 5px;">
 
-  <img src="../imgs/lec0/solucion2.png/"><br>
+  ![Solucion2]({{ '/imgs/recursos/solucion2.png' | relative_url}})
   <strong>
   Explicación (Proceso del diagrama)
   </strong>
@@ -296,23 +296,24 @@ Cabe mencionar que n es un número entero positivo, de modo que no vas a sumar n
   <p>
   El segundo método es aplicando un patrón matemático que podemos notar. Tomemos de ejemplo una suma del 1 al 100:
   </p>
-  <img src="../imgs/lec0/explicacion2.png/"><br>
+  ![Explicacion2]({{ '/imgs/recursos/explicacion2.png' | relative_url}})
 
   <strong>Solución más eficiente</strong>
   <p>
   Si sumamos el primer número con el último tendremos el mismo resultado que sumando el segundo con el penúltimo, y que el tercero con el antepenúltimo, y así sucesivamente. Esto lo podemos emplear para realizar una multiplicación de n + 1 la cantidad de veces n / 2:
   </p>
-  <img src="../imgs/lec0/gauss.png/">
+  ![Gauss]({{ '/imgs/lec0/gauss.png' | relative_url}})
+
   <p>
   Siendo n un entero positivo, sumando números enteros de 1 hasta n, se puede resolver con una sola operación.
   </p>
   <p>
   Para el caso de n = 100, se resuelve como:
-  <img src="../imgs/lec0/caso2.png/">
+  ![Caso2]({{ '/imgs/lec0/caso2.png' | relative_url}})
   <p>
   Este procedimiento lo ideó el matemático Carl Gauss desde pequeño, y en RAPTOR se representa  con un algoritmo mucho más pequeño de esta manera:
   </p>
-  <img src="../imgs/lec0/gaussdia.png">
+  ![Gauss Diagrama]({{ '/imgs/lec0/gaussdia.png' | relative_url}})
 </div>
 
 <script>

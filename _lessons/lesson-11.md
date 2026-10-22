@@ -78,40 +78,6 @@ int main(){
 ### Ejercicio 1: Cambiar precios
 Tienes un programa de C++, con 4 variables globales (fuera de la función main) que representan el precio de 4 productos. Debes usar punteros que contengan la dirección de cada producto y pedir que pongas un nuevo precio. Al final debes mostrar en la consola los nuevos precios de cada producto.
 
-#### Ejemplo 1
-
-#### Entrada
-<pre>
-p
-</pre>
-
-#### Salida
-<pre>
-No quiero queue
-</pre>
-
-#### Ejemplo 2
-
-#### Entrada
-<pre>
-u
-</pre>
-
-#### Salida
-<pre>
-No quiero queue
-</pre>
-
-#### Ejemplo 3
-
-#### Entrada
-<pre>
-q
-</pre>
-#### Salida
-<pre>
-Quiero un queue
-</pre>
 
 ```cpp
 //precios
@@ -141,12 +107,8 @@ int main(){
   Explicación 
   </strong>
   <p>
-  Define las funciones queque() y noQueque().
+  Cambias las variables luego de declararlas... cambiándolas.
   </p>
-  <p>
-  Tienes un programa de C++, con 4 variables globales (fuera de la función main) que representan el precio de 4 productos. Debes usar punteros que contengan la dirección de cada producto y pedir que pongas un nuevo precio. Al final debes mostrar en la consola los nuevos precios de cada producto.  
-  </p>
-  <p>Código base</p>
 <pre><code>
 #include &lt;iostream&gt;
 using namespace std;
@@ -160,13 +122,26 @@ float aguacate = 5.40;
 
 int main(){
     //cambiar el precio de cada uno, usando punteros
-    float* cambiar_precio = &amp;manzana;
     //tipo* nombre = &amp;variable;
+    float* cambiar_manzana = &amp;manzana;
+    float* cambiar_platano = &amp;platano;
+    float* cambiar_naranja = &amp;naranja;
+    float* cambiar_aguacate = &amp;aguacate;
 
-    //SOLUCION AQUI
+    cin &gt;&gt; *cambiar_manzana;
+    cin &gt;&gt; *cambiar_platano;
+    cin &gt;&gt; *cambiar_naranja;
+    cin &gt;&gt; *cambiar_aguacate;
 
+    cout &lt;&lt; "El precio de la manzana es: " &lt;&lt; manzana &lt;&lt; '\n';
+    cout &lt;&lt; "El precio del platano es: " &lt;&lt; platano &lt;&lt; '\n';
+    cout &lt;&lt; "El precio de la naranja es: " &lt;&lt; naranja &lt;&lt; '\n';
+    cout &lt;&lt; "El precio del aguacate es: " &lt;&lt; aguacate &lt;&lt; '\n';
+
+    
     return 0;
 }
+
 
 </code></pre>
 

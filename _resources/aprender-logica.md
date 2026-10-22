@@ -10,7 +10,7 @@ permalink: /recursos/aprender-logica/
 Contar con una lógica bien desarrollada a la hora de programar es algo esencial, pues en su núcleo la programación no es más que lógica junto a matemáticas. Por eso, a través de esta página compartimos dos “lenguajes de programación” (Scratch y Karel) y un visualizador de diagramas de flujo (RAPTOR).
 
 ## RAPTOR
-<img src="../imgs/recursos/raptor.jpg/">
+![Raptor]({{ '/imgs/recursos/raptor.jpg' | relative_url}})
 
 RAPTOR es una herramienta que permite visualizar diagramas de flujo a través de seis bloques: entrada, llamada, asignación de variables, salida, bucle y condicional. Su principal uso es visualizar diagramas de flujo, aunque también permite enseñar lógica computacional.
 
@@ -19,14 +19,16 @@ RAPTOR es una herramienta que permite visualizar diagramas de flujo a través de
 [RAPTOR](https://www.raptor.martincarlisle.com/)
 
 ## Scratch
-<img src="../imgs/recursos/scratch.png/">
-
+<img src="{{ '/imgs/recursos/scratch.png' | relative_url }}"
+     alt="scratch"
+     height="320"
+     width="213">
 Scratch es un lenguaje de programación orientado a objetos creado por el MIT con el objetivo de facilitar el desarrollo de la lógica para personas de cualquier grupo de edad. Consiste en el uso de bloques para hacer que un gato, así como otros animales e individuos, realicen acciones.
 
 [Scratch](https://scratch.mit.edu/)
 
 ## Karel
-<img src="../imgs/recursos/karel.png/">
+![Karel]({{ '/imgs/recursos/karel.png' | relative_url}})
 
 Karel o Karel el Robot es un lenguaje de programación que consiste en mover un pequeño robot con órdenes simples, bucles y otros comandos. Es utilizado en la Olimpiada Mexicana de Informática para sus participantes de primaria y secundaria.
 

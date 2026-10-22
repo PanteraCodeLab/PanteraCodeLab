@@ -95,7 +95,7 @@ Aquí una cosa que probablemente no sabías... ¡el string es un arreglo dinámi
 
 ### Problemas
 
-En caso de dudas revisa las páginas encontradas en [recursos]({{ '/html/recursos/paginas-programacion.html' | relative_url }}).
+En caso de dudas revisa las páginas encontradas en [recursos]({{ '/recursos/paginas-programacion' | relative_url }}).
 
 - [Problema 1](https://omegaup.com/arena/problem/Ordenando-las-letras-de-la-linea)
 - [Problema 2](https://omegaup.com/arena/problem/Imprimiendo-enteros-por-paridad/)

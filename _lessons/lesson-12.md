@@ -119,34 +119,10 @@ int main(){
 
 ![Salida de función con referencia]({{ '/imgs/lec12/otss.png' | relative_url }})
 
-### Ejercicio 1: Función queue
+### Ejercicio 1: Función queque
 La función principal declara un char, y pide que des un carácter. Si el carácter escrito es ‘q’, se llamará a una función queque() que escriba que quieres un queque Si es un carácter diferente, se llama a una función noQueque() que escriba que no quieres queque.
 
 #### Ejemplo 1
-
-#### Entrada
-<pre>
-p
-</pre>
-
-#### Salida
-<pre>
-No quiero queue
-</pre>
-
-#### Ejemplo 2
-
-#### Entrada
-<pre>
-u
-</pre>
-
-#### Salida
-<pre>
-No quiero queue
-</pre>
-
-#### Ejemplo 3
 
 #### Entrada
 <pre>
@@ -155,9 +131,32 @@ q
 
 #### Salida
 <pre>
-Quiero un queue
+Quiero un queque
 </pre>
 
+#### Ejemplo 2
+
+#### Entrada
+<pre>
+e
+</pre>
+
+#### Salida
+<pre>
+No quiero queque
+</pre>
+
+#### Ejemplo 3
+
+#### Entrada
+<pre>
+p
+</pre>
+
+#### Salida
+<pre>
+No quiero queque
+</pre>
 <button class="problem0" onclick="mostrarSolucionTre()" style="border: none; background-color: #f7f8fc; font-size: 16px; cursor: pointer; padding: 8px 12px; border-radius: 5px;">
   <strong>Solución</strong> ▼
 </button>
@@ -203,6 +202,109 @@ int main(){
 <script>
 function mostrarSolucionTre() {
   const solution = document.getElementById("solutiontre");
+  solution.style.display =
+    solution.style.display === "none" ? "block" : "none";
+}
+</script>
+
+### Ejercicio 2: Elevar a la potencia
+Implementa una función que recibe dos enteros b y exp, y devuelva la operación b^exp (AQUÍ SE USA ^ PARA REFERIRSE A EXPONENTE, NO A XOR), es decir, b elevado a la exp.
+#### Ejemplo 1
+
+#### Entrada
+<pre>
+2
+3
+</pre>
+
+#### Salida
+<pre>
+8
+</pre>
+
+#### Ejemplo 2
+
+#### Entrada
+<pre>
+5
+3
+</pre>
+
+#### Salida
+<pre>
+125
+</pre>
+
+#### Ejemplo 3
+
+#### Entrada
+<pre>
+2
+10 
+</pre>
+
+#### Salida
+<pre>
+1024
+</pre>
+
+```cpp
+int elevar(int b, int exp){
+    //SOLUCION AQUI
+    return 0;
+}
+
+int main(){
+    int b; cin >> b;
+    int exp; cin >> exp;
+
+    cout << elevar(b, exp);
+
+    return 0;
+}
+
+```
+
+<button class="problem0" onclick="mostrarSolucion()" style="border: none; background-color: #f7f8fc; font-size: 16px; cursor: pointer; padding: 8px 12px; border-radius: 5px;">
+  <strong>Solución</strong> ▼
+</button>
+<div id="solution" style="display: none; margin-top: 10px; padding: 12px; background-color: #f7f8fc; border-radius: 5px;">
+
+  <strong>
+  Explicación 
+  </strong>
+  <p>
+  La función elevar contiene dentro de sí un bucle for que multiplica b por si mismo 
+  con un límite exp.
+  </p>
+<pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int elevar(int b, int exp){
+    int r = b;
+    for(int i = 1; i &gt; exp; i++){
+        r *= b;
+    }
+    return r;
+}
+
+
+int main(){
+    int b; cin &gt;&gt; b;
+    int exp; cin &gt;&gt; exp;
+
+    cout &lt;&lt; elevar(b, exp);
+
+    return 0;
+}
+</code></pre>
+
+</div>
+
+<script>
+function mostrarSolucion() {
+  const solution = document.getElementById("solution");
   solution.style.display =
     solution.style.display === "none" ? "block" : "none";
 }

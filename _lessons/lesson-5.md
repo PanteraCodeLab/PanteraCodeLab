@@ -75,7 +75,7 @@ int main(){
 
 ### Problemas
 
-En caso de dudas revisa las páginas encontradas en [recursos]({{ '/html/recursos/paginas-programacion.html' | relative_url }}).
+En caso de dudas revisa las páginas encontradas en [recursos]({{ '/recursos/paginas-programacion' | relative_url }}).
 
 - [Problema 1](https://omegaup.com/arena/problem/suma_simple/)
 - [Problema 2](https://omegaup.com/arena/problem/0-Resta-basica/)
