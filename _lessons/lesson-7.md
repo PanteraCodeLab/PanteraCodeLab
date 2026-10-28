@@ -41,6 +41,10 @@ int main(){
 }
 ```
 
+### Video explicando el bucle while
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8MrFhVCKM0s?si=RtcOdjhDHo1uSJZj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Para repetir mientras algo no sea verdadero, se agrega un signo de exclamación, por ejemplo: `while(!adolescente)`.
 
 ### `do while`
@@ -70,6 +74,10 @@ En otras palabras, comienza a contar desde 0 hasta 10, contando de 1 en 1. Cada 
 Las variables declaradas en el contador, la condición y la modificación no pueden utilizarse fuera del bucle. Sí puedes usar dentro del bucle las variables declaradas fuera de él.
 
 Un ejemplo de código que puede crearse con un bucle `for` es mostrar los números del 1 al 100:
+
+### Video explicando el bucle for
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U6hCXAYTjYw?si=EHlM6KXVHcvFInlW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ```cpp
 #include <iostream>
@@ -143,6 +151,10 @@ int main(){
 ```
 
 ![Salir de un while con break]({{ '/imgs/lec6/while_break.png' | relative_url }})
+
+### Video explicando continue y break
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eGQ0PXViH3g?si=473fRqcYd_VtDmM2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Problemas
 

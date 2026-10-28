@@ -93,6 +93,10 @@ int main(){
 
 Aquí una cosa que probablemente no sabías... ¡el string es un arreglo dinámico! Probablemente no te emociones tanto como yo dado que aprendas esto, notando claro, que te emociones siquiera. El vector es un arreglo dinámico de caracteres.
 
+### Video explicando vectores
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NnhYY5XiOCE?si=_LtjgH0CP03gtP9w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Problemas
 
 En caso de dudas revisa las páginas encontradas en [recursos]({{ '/recursos/paginas-programacion' | relative_url }}).

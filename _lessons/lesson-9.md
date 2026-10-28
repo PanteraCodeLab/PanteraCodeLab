@@ -91,6 +91,9 @@ int main(){
     }
 }
 ```
+### Video explicando arreglos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wEYIfR9SjjM?si=x6yQHx6b-uDsve0_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 La salida de este código sería igual a la anterior. Los arreglos pueden tener múltiples dimensiones; es decir, puedes tener un arreglo de arreglos, un arreglo de arreglo de arreglos, etc. Aquí un arreglo bidimensional:
 
@@ -157,6 +160,10 @@ int main(){
 ```
 
 También podemos reasignar elementos del arreglo.
+
+### Video explicando arreglos de arreglos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l-w-s6x-Amk?si=BJ1Rphqx68Ao2KiK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Problemas
 

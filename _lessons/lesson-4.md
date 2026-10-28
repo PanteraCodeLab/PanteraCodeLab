@@ -105,6 +105,10 @@ int main(){
 
 ![Salida de entrada y saludo]({{ '/imgs/lec4/out7.png' | relative_url }})
 
+### Video explicando entrada y salida
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WgRZd5h3Yqc?si=F6DPbLP0WhrxUnJl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Problemas
 
 Registra una cuenta en [OmegaUp](https://omegaup.com) para que su juez en línea evalúe tus soluciones. En caso de dudas, revisa [las páginas de programación]({{ '/recursos/paginas-programacion/' | relative_url }}).

@@ -48,6 +48,9 @@ int main(){
 }
 ```
 
+### Video explicando bucles anidados
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y4VFsHS7jPc?si=coBjaLFTegT9QGzt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Problemas
 
 En caso de dudas revisa las páginas encontradas en [recursos]({{ '/recursos/paginas-programacion' | relative_url }}).

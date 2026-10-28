@@ -74,3 +74,7 @@ Para declarar constantes sólo faltaría agregar “const” antes del tipo de d
 * <span style="color:#323cab;">const float</span> eul = 2.71;
 
 Los valores constantes se mantienen como fueron declarados, su valor no puede cambiar.
+
+### Video explicando variables y constantes
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Fzb0kBYASKs?si=3bTqCoM9-QzLI4v5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
